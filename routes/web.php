@@ -29,8 +29,8 @@ Route::get('Newsfeed', function () {
     return view('Newsfeed.index');
 });
 
-Route::get('Question/Previews', function () {
-    return view('Questions.index');
+Route::get('Board-Questions', function () {
+    return view('Questions.BoardQuestion');
 });
 
 

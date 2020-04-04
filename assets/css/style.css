@@ -17,7 +17,7 @@
 /* common styles and colors shortcuts end here */
 
 body{
-        background: url(../images/backgrounds/abc.png) no-repeat center center fixed; 
+        background: url(../images/backgrounds/abc.png) no-repeat center center fixed;
         background-color: rgba(255,255,255,0.8);
         background-blend-mode: lighten;
         -webkit-background-size: cover;
@@ -104,7 +104,7 @@ body{
     /* overflow-x: hidden;
     overflow-y: scroll;
     max-height: 387px; */
-    
+
 }
 
 p{
@@ -134,7 +134,7 @@ p{
 }
 .page-body .dashboard-contents .col-md-3 img{
     width: 120px;
-    height:120px; 
+    height:120px;
 }
 .page-body .dashboard-contents .col-md-3 h3{
     font-size: 15px;
@@ -239,11 +239,54 @@ a.chapter-button.active{
 
 /* topic page css ends here */
 
-/* question/test/prev-que page css start here */
+/* board question page css start here */
+
+.search-box{
+    text-align: left;
+    display: flex;
+}
+
+.search-box .select2{
+    margin: 0px 10px 0px 0px;
+}
+
+.search-box .select2-container-active.select2-container{
+    border: none!important;
+}
+
+.mcq-box{
+    border: 1px solid #ececec;
+    margin: 0px 0px 15px 0px;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    margin-top: 10px;
+    /* max-height: 270px; */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.mcq-box::-webkit-scrollbar{
+    width: 10px;
+    padding: 20px;
+}
+
+.mcq-box::-webkit-scrollbar-track{
+    /* border: 5px; */
+    box-shadow: #949494;
+}
+
+.mcq-box::-webkit-scrollbar-thumb{
+    background-color: #29aae1;
+    border-radius: 50px;
+}
+
+.mcq-box:hover{
+    border-color:#29aae1;
+}
 
 .single-mcq{
-    margin: 10px;
-    padding: 5px;
+    padding: 0px 0px 20px 0px;
 }
 
 .question-no{
@@ -259,7 +302,7 @@ a.chapter-button.active{
 
 .single-mcq ul{
     list-style: none;
-    padding-left: 20px;
+    /* padding-left: 20px; */
 }
 
 .single-mcq li{
@@ -280,7 +323,37 @@ a.chapter-button.active{
     background:#025288;
 }
 
-/* question/test/prev-que page css ends here */
+/* samsung galaxy height */
+/* -mox-full-creen/-webkit-full-screen */
+/* @media only screen and (min-height: 640px){
+
+}
+@media only screen and (min-height: 640px){
+    .mcq-box{
+        max-height: 350px;
+    }
+} */
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    .mcq-box{
+        max-height: 350px;
+    }
+}
+
+  /* Tablet Styles */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    .mcq-box{
+        max-height: 645px;
+    }
+  }
+
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+    .mcq-box{
+        max-height: 245px;
+    }
+  }
+/* board question page css ends here */
 
 /* newsfeed page css start here */
 
@@ -568,7 +641,7 @@ button.comment-report-button:hover{
 
 .comment-action .three-star i:nth-child(2){
     color: goldenrod;
- } 
+ }
 .comment-action .three-star i:nth-child(3){
     color: goldenrod;
 }
@@ -578,7 +651,7 @@ button.comment-report-button:hover{
 
 .comment-action .four-star i:nth-child(2){
     color: goldenrod;
- } 
+ }
 .comment-action .four-star i:nth-child(3){
     color: goldenrod;
 }
@@ -591,7 +664,7 @@ button.comment-report-button:hover{
 
 .comment-action .five-star i:nth-child(2){
     color: goldenrod;
- } 
+ }
 .comment-action .five-star i:nth-child(3){
     color: goldenrod;
 }
@@ -624,14 +697,14 @@ button.comment-report-button:hover{
         font-size: 18px;
     }
 }
-  
+
   /* Tablet Styles */
   @media only screen and (min-width: 401px) and (max-width: 960px) {
     .page-content{
         margin-top: 15vw;
     }
   }
-  
+
   /* Desktop Styles */
   @media only screen and (min-width: 961px) {
     .page-content{
