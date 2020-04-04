@@ -1,6 +1,11 @@
 @extends('app')
 @section('title','Question')
+@section('page-css')
+    <!-- search question selects css -->
+    <link href="{{ asset('assets/vendors/select2/select2.css') }}" rel="stylesheet">
+@endsection
 @section('content')
+
 <!-- box title bar-->
 <div class="page-title">
     <!-- back button -->
@@ -67,4 +72,10 @@
         <button class="test-submit-button">Submit</button>
         </div>
     </div>
+@endsection
+@section('page-js')
+    {{-- board question page --}}
+    <script src="{{ asset('assets/vendors/select2/select2.min.js') }}"></script>
+    {{-- custom page js --}}
+    <script src="{{ asset('assets\js\custom\board-question.js') }}"></script>
 @endsection

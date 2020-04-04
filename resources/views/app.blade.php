@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- required css files -->
-
-    <!-- board question page css -->
-    <link href="{{ asset('assets/vendors/select2/select2.css') }}" rel="stylesheet">
+    @yield('page-css')
     <!-- bootstrap css files -->
     <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
@@ -62,9 +60,6 @@
 <!-- page js -->
 <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
-{{-- board question page --}}
-<script src="{{ asset('assets/vendors/select2/select2.min.js') }}"></script>
+@yield('page-js')
 
-{{-- custom page js --}}
-<script src="{{ asset('assets\js\custom\board-question.js') }}"></script>
 </html>
