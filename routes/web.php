@@ -29,9 +29,9 @@ Route::get('Newsfeed', function () {
     return view('Newsfeed.index');
 });
 
-Route::get('Board-Questions', function () {
-    return view('Questions.BoardQuestion');
-});
+// board question routes
+Route::get('board-questions','BoardquestionController@index');
+Route::get('SearchBoardQuestion/{id}','BoardquestionController@show');
 
 
 // Study topic pages

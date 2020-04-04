@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    {{-- page custom css --}}
+    @yield('page-custom-css')
 
     <title>@yield('title')</title>
 </head>

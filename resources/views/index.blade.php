@@ -38,7 +38,7 @@
             </a>
         </div>
         <div class="col-md-3">
-            <a href="{{ asset('Board-Questions') }}">
+            <a href="{{ url('board-questions') }}">
             <div class="button">
                 <img src="{{ asset('assets') }}/images/icons/boardquestion.png" alt="" class="img-fluid">
             <h3>Previews questions</h3>

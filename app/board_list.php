@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class board_list extends Model
 {
-    //
+
 }

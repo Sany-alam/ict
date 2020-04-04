@@ -1,0 +1,198 @@
+/* board question page css start here */
+
+
+/* .page-body{
+    background-color: #f3f3f3;
+    padding: 0!important;
+    position: relative; */
+
+/*  overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 387px; */
+/* } */
+
+
+
+/************************ First edition style  ****************************/
+/* .search-box{
+    text-align: left;
+    display: flex;
+} */
+/************************ First edition style  ****************************/
+/************************ Second edition style  ****************************/
+/* .search-box{ */
+    /* text-align: left; */
+    /***border-bottom: 1px solid #29aae1; ***/
+    /* display: flex; */
+/* } */
+
+.newsfeed-buttons{
+    outline: none!important;
+    color: #fff;
+    background-color: #29AAE1;
+    padding: 5px 50px;
+    border: 1px solid #019de0;
+    border-radius: 15px;
+    margin: 11px 0px 5px 0px;
+}
+
+.newsfeed-buttons:hover{
+    transition: 0.4s;
+    color: #019de0;
+    background-color: #fafafa;
+}
+/************************ Second edition style  ****************************/
+.search-box .select2{
+    margin: 0px 10px 0px 0px;
+}
+
+.search-box .select2-container-active.select2-container{
+    border: none!important;
+}
+
+.mcq-box{
+    padding: 20px;
+}
+/************************ First edition style  ****************************/
+.mcq-box{
+    border: 1px solid #ececec;
+    margin: 0px 0px 15px 0px;
+    border-radius: 5px;
+    background: #fff;
+    padding: 15px;
+    margin-top: 10px;
+    max-height: 270px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.mcq-box::-webkit-scrollbar{
+    width: 10px;
+    padding: 20px;
+}
+
+.mcq-box::-webkit-scrollbar-track{
+    /* border: 5px; */
+    box-shadow: #949494;
+}
+
+.mcq-box::-webkit-scrollbar-thumb{
+    background-color: #29aae1;
+    border-radius: 50px;
+}
+
+.mcq-box:hover{
+    border-color:#29aae1;
+}
+/************************ First edition style  ****************************/
+
+
+.single-mcq{
+    padding: 0px 0px 20px 0px;
+}
+
+.question-no{
+    background: #EE8C34;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 2px;
+}
+
+.question-mcq{
+    padding-left: 5px;
+}
+
+.single-mcq ul{
+    list-style: none;
+    /* padding-left: 20px; */
+}
+
+.single-mcq li{
+    padding-left: 2px;
+}
+/************************ Second edition style  ****************************/
+/* .test-submit-button{
+    outline: none!important;
+    background: #0073C1;
+    color: #fff;
+    padding: 2px 25px;
+    border: 1px solid #025288;
+    border-radius: 3px;
+    font-size: 13px;
+    position: fixed;
+    top: 525px;
+}
+.test-submit-button:hover{
+    background:#025288;
+} */
+
+/* Mobile Styles */
+/* @media only screen and (max-width: 400px) {
+    .test-submit-button{
+    position: fixed;
+    top: 550px;
+    right: 40px;
+}
+} */
+
+  /* Tablet Styles */
+  /* @media only screen and (min-width: 401px) and (max-width: 960px) {
+    .test-submit-button{
+        position: fixed;
+        top: 90vh;
+        right: 10vw;
+}
+  } */
+
+  /* Desktop Styles */
+  /* @media only screen and (min-width: 961px) {
+    .test-submit-button{
+        position: fixed;
+        top: 515px;
+        right: 150px;
+    }
+  } */
+/************************ Second edition style  ****************************/
+
+/************************ First edition style  ****************************/
+.test-submit-button{
+    outline: none!important;
+    background: #0073C1;
+    color: #fff;
+    padding: 2px 25px;
+    border: 1px solid #025288;
+    border-radius: 3px;
+    font-size: 13px;
+    margin-right: auto;
+}
+.test-submit-button:hover{
+    background:#025288;
+}
+/************************ First edition style  ****************************/
+
+/************************ First edition style  ****************************/
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    .mcq-box{
+        max-height: 350px;
+    }
+}
+
+  /* Tablet Styles */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    .mcq-box{
+        max-height: 645px;
+    }
+  }
+
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+    *{
+        font-size: 16px;;
+    }
+    .mcq-box{
+        max-height: 270px;
+    }
+  }
+/************************ First edition style  ****************************/
+/* board question page css ends here */

@@ -4,6 +4,9 @@
     <!-- search question selects css -->
     <link href="{{ asset('assets/vendors/select2/select2.css') }}" rel="stylesheet">
 @endsection
+@section('page-custom-css')
+    <link rel="stylesheet" href="{{ asset('assets\css\custom\boardquestion.css') }}">
+@endsection
 @section('content')
 
 <!-- box title bar-->
@@ -16,61 +19,21 @@
     <!-- box body -->
     <div class="page-body">
         <div class="search-box">
-            <select class="select2" id="board">
-                <option value="">Select Board</option>
-                <option value="NL">Nails</option>
-                <option value="BN">Bananas</option>
-                <option value="HL">Helicopters</option>
+            <select class="select2" id="boardList">
+                <option value="">Select Board & Year</option>
+                @for ($i = 0; $i < count($board); $i++)
+                <option value="{{ $board[$i]->id }}"> {{ $board[$i]->year }} {{ $board[$i]->board_name }} </option>
+                @endfor
             </select>
-            <select class="select2" id="year">
-                <option value="">Slect Year</option>
-                <option value="NL">Nails</option>
-                <option value="BN">Bananas</option>
-                <option value="HL">Helicopters</option>
-            </select>
-            <button class="newsfeed-buttons" style="margin-top: 10px;padding: 2px 10px 4px 10px;">Search</button>
+            <button class="newsfeed-buttons" id="search-board-question">Search</button>
         </div>
         <!-- single mcq -->
         <div class="mcq-box">
-            @for ($i = 1; $i <= 10; $i++)
-            <div class="single-mcq text-left">
-                <h4 class="text-light-primary question">
-                    <span class="question-no">{{$i}}</span>
-                    <span class="question-mcq">Quen here?</span>
-                </h4>
-                <ul>
-                    <li>
-                    <div class="custom-control custom-radio">
-                        <input name="question" type="radio" class="custom-control-input" id="options1/{{$i}}">
-                        <label class="custom-control-label" for="options1/{{$i}}">Check this custom radio</label>
-                        </div>
-                    </li>
-                    <li>
-                    <div class="custom-control custom-radio">
-                        <input name="question" type="radio" class="custom-control-input" id="options2/{{$i}}">
-                        <label class="custom-control-label" for="options2/{{$i}}">Check this custom radio</label>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="custom-control custom-radio">
-                        <input name="question" type="radio" class="custom-control-input" id="options3/{{$i}}">
-                        <label class="custom-control-label" for="options3/{{$i}}">Check this custom radio</label>
-                    </div>
-                    </li>
-                    <li>
-                    <div class="custom-control custom-radio">
-                        <input name="question" type="radio" class="custom-control-input" id="options4/{{$i}}">
-                        <label class="custom-control-label" for="options4/{{$i}}">Check this custom checkbox</label>
-                    </div>
-                    </li>
-                </ul>
-            </div>
-            @endfor
+            <div id="board-mcq"></div>
+            <h3 id="board-mcq-no-data">Search question</h3>
         </div>
         <!-- test submit button -->
-        <div class="text-right">
         <button class="test-submit-button">Submit</button>
-        </div>
     </div>
 @endsection
 @section('page-js')
