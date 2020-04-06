@@ -21,9 +21,10 @@ class BoardquestionController extends Controller
         $data = '';
         for ($i=0; $i < sizeof($query); $i++)
         {
+            $j = $i+1;
             $data .='<div class="single-mcq text-left">
                         <h4 class="text-light-primary question">
-                            <span class="question-no">'.$i.'</span>
+                            <span class="question-no">'.$j.'</span>
                             <span class="question-mcq">'.$query[$i]->question.'</span>
                         </h4>
                         <ul>
