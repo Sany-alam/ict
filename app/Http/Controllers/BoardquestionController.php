@@ -30,26 +30,26 @@ class BoardquestionController extends Controller
                         <ul>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="question" type="radio" class="custom-control-input" id="options1/{{$i}}">
-                                <label class="custom-control-label" for="options1/{{$i}}">'.$query[$i]->option1.'</label>
-                                </div>
-                            </li>
-                            <li>
-                            <div class="custom-control custom-radio">
-                                <input name="question" type="radio" class="custom-control-input" id="options2/{{$i}}">
-                                <label class="custom-control-label" for="options2/{{$i}}">'.$query[$i]->option2.'</label>
+                                <input name="question'.$j.'" type="radio" class="custom-control-input board_question" id="options'.$j.'1">
+                                <label class="custom-control-label" for="options'.$j.'1">'.$query[$i]->option1.'</label>
                             </div>
                             </li>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="question" type="radio" class="custom-control-input" id="options3/{{$i}}">
-                                <label class="custom-control-label" for="options3/{{$i}}">'.$query[$i]->option3.'</label>
+                                <input name="question'.$j.'" type="radio" class="custom-control-input board_question" id="options'.$j.'2">
+                                <label class="custom-control-label" for="options'.$j.'2">'.$query[$i]->option2.'</label>
                             </div>
                             </li>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="question" type="radio" class="custom-control-input" id="options4/{{$i}}">
-                                <label class="custom-control-label" for="options4/{{$i}}">'.$query[$i]->option4.'</label>
+                                <input name="question'.$j.'" type="radio" class="custom-control-input board_question" id="options'.$j.'3">
+                                <label class="custom-control-label" for="options'.$j.'3">'.$query[$i]->option3.'</label>
+                            </div>
+                            </li>
+                            <li>
+                            <div class="custom-control custom-radio">
+                                <input name="question'.$j.'" type="radio" class="custom-control-input board_question" id="options'.$j.'4">
+                                <label class="custom-control-label" for="options'.$j.'4">'.$query[$i]->option4.'</label>
                             </div>
                             </li>
                         </ul>

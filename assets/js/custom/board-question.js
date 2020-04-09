@@ -32,4 +32,18 @@ $(function() {
             });
         }
     });
+
+
+    // submit board question
+    // $("#submit-board-question").click(function() {
+    //     for (let i = 0; i < count($(".board_question").is(":checked")); i++) {
+    //         if ($(".board_question").is(":checked")) {
+    //         var board_question = [];
+    //         $('input.board_question').each(function(){
+    //             board_question.push($(this).val());
+    //         });
+    //     }
+    //     }
+    //     alert(board_question);
+    // });
 });

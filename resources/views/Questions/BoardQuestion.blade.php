@@ -33,7 +33,7 @@
             <h3 id="board-mcq-no-data">Search question</h3>
         </div>
         <!-- test submit button -->
-        <button class="test-submit-button">Submit</button>
+        <button class="test-submit-button" id="submit-board-question">Submit</button>
     </div>
 @endsection
 @section('page-js')
