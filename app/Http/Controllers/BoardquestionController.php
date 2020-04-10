@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Session;
 use App\board_list;
 use App\question;
 
@@ -30,25 +31,25 @@ class BoardquestionController extends Controller
                         <ul>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="question'.$j.'" type="radio" class="custom-control-input board_question" id="options'.$j.'1">
+                                <input name="answer['.$query[$i]->id.']" value="'.$query[$i]->option1.'" type="radio" class="custom-control-input board_question" id="options'.$j.'1">
                                 <label class="custom-control-label" for="options'.$j.'1">'.$query[$i]->option1.'</label>
                             </div>
                             </li>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="question'.$j.'" type="radio" class="custom-control-input board_question" id="options'.$j.'2">
+                                <input name="answer['.$query[$i]->id.']" value="'.$query[$i]->option2.'" type="radio" class="custom-control-input board_question" id="options'.$j.'2">
                                 <label class="custom-control-label" for="options'.$j.'2">'.$query[$i]->option2.'</label>
                             </div>
                             </li>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="question'.$j.'" type="radio" class="custom-control-input board_question" id="options'.$j.'3">
+                                <input name="answer['.$query[$i]->id.']" value="'.$query[$i]->option3.'" type="radio" class="custom-control-input board_question" id="options'.$j.'3">
                                 <label class="custom-control-label" for="options'.$j.'3">'.$query[$i]->option3.'</label>
                             </div>
                             </li>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="question'.$j.'" type="radio" class="custom-control-input board_question" id="options'.$j.'4">
+                                <input name="answer['.$query[$i]->id.']" value="'.$query[$i]->option4.'" type="radio" class="custom-control-input board_question" id="options'.$j.'4">
                                 <label class="custom-control-label" for="options'.$j.'4">'.$query[$i]->option4.'</label>
                             </div>
                             </li>
@@ -56,5 +57,26 @@ class BoardquestionController extends Controller
                     </div>';
         }
         return $data;
+    }
+
+    public function question_submit(Request $request)
+    {   $right = 0;
+        $wrong = 0;
+        foreach($request->answer as $option_num => $option_val){
+
+            //  $myfile = fopen("file.txt", "a+") or die("Unable to open file!");
+            //  fwrite($myfile,$option_num." ".$option_val."\n");
+
+             $question = question::where('id',$option_num)->first();
+             if ($question->correct_option === $option_val) {
+                $right = $right+1;
+             }
+             else {
+                $wrong = $wrong+1;
+             }
+        }
+        $data = board_list::get();
+        Session::flash('result', 'Right = '.$right.' And Wrong = '.$wrong);
+        return view('Questions.BoardQuestion',['board'=>$data]);
     }
 }

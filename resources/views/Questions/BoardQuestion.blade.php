@@ -29,11 +29,20 @@
         </div>
         <!-- single mcq -->
         <div class="mcq-box">
+           <form action="{{ url('question_submit') }}" method="POST">
+               @csrf
             <div id="board-mcq"></div>
             <h3 id="board-mcq-no-data">Search question</h3>
         </div>
         <!-- test submit button -->
-        <button class="test-submit-button" id="submit-board-question">Submit</button>
+        <button class="test-submit-button mb-2" type="submit">Submit</button>
+        </form>
+        @if (Session::has('result'))
+            <p class="text-light-primary">{{ Session::get('result') }}</p>
+            @php
+                Session::forget('result')
+            @endphp
+        @endif
     </div>
 @endsection
 @section('page-js')

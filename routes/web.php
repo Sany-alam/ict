@@ -32,6 +32,7 @@ Route::get('Newsfeed', function () {
 // board question routes
 Route::get('board-questions','BoardquestionController@index');
 Route::get('SearchBoardQuestion/{id}','BoardquestionController@show');
+Route::post('question_submit','BoardquestionController@question_submit');
 
 
 // Study topic pages

@@ -20,7 +20,7 @@ $(function() {
                         $("#board-mcq-no-data").hide();
                         $("#board-mcq").html(data);
                         $("#board-mcq").show();
-                        console.log(data);
+                        // console.log(data);
                     }
                     else{
                         console.log(data);
@@ -33,17 +33,21 @@ $(function() {
         }
     });
 
-
-    // submit board question
-    // $("#submit-board-question").click(function() {
-    //     for (let i = 0; i < count($(".board_question").is(":checked")); i++) {
-    //         if ($(".board_question").is(":checked")) {
-    //         var board_question = [];
-    //         $('input.board_question').each(function(){
-    //             board_question.push($(this).val());
-    //         });
-    //     }
-    //     }
-    //     alert(board_question);
+    // $("#board-question-form-submit").click(function() {
+    //     formdata = new FormData();
+    //     formdata.append('answer',$("#board-question-form"));
+    //     $.ajax({
+    //         processData:false,
+    //         contentType:false,
+    //         data:formdata,
+    //         dataType:"json",
+    //         url:"question_submit",
+    //         type:"POST",
+    //         success:function(data){
+    //             // alert(data);
+    //             console.log(data);
+    //         }
+    //     });
     // });
+
 });
