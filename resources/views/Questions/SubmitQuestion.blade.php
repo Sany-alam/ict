@@ -18,25 +18,12 @@
     </div>
     <!-- box body -->
     <div class="page-body">
-        <div class="search-box">
-            <select class="select2" id="boardList">
-                <option value="">Select Board & Year</option>
-                @for ($i = 0; $i < count($board); $i++)
-                <option value="{{ $board[$i]->id }}"> {{ $board[$i]->year }} {{ $board[$i]->board_name }} </option>
-                @endfor
-            </select>
-            <button class="newsfeed-buttons" id="search-board-question">Search</button>
-        </div>
         <!-- single mcq -->
         <div class="mcq-box">
-           <form action="{{ url('question_submit') }}" method="POST">
-               @csrf
-            <div id="board-mcq"></div>
-            <h3 id="board-mcq-no-data">Search question</h3>
+            <h2 class="text-center text-light-primary">Your result is</h2>
+            <p class="text-center">Right answer {{ $right }} And wrong answer {{ $wrong }}</p>
+            <p class="text-center">Total answer {{ $total }}</p>
         </div>
-        <!-- test submit button -->
-        <button class="test-submit-button mb-2" type="submit">Submit</button>
-        </form>
     </div>
 @endsection
 @section('page-js')

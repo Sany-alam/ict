@@ -62,6 +62,7 @@ class BoardquestionController extends Controller
     public function question_submit(Request $request)
     {   $right = 0;
         $wrong = 0;
+        $total = 0;
         foreach($request->answer as $option_num => $option_val){
 
             //  $myfile = fopen("file.txt", "a+") or die("Unable to open file!");
@@ -74,9 +75,9 @@ class BoardquestionController extends Controller
              else {
                 $wrong = $wrong+1;
              }
+
+             $total = $total+1;
         }
-        $data = board_list::get();
-        Session::flash('result', 'Right = '.$right.' And Wrong = '.$wrong);
-        return view('Questions.BoardQuestion',['board'=>$data]);
+        return view('Questions.SubmitQuestion',['right'=>$right,'wrong'=>$wrong,'total'=>$total]);
     }
 }
