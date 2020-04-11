@@ -1,0 +1,25 @@
+.button-compiler-box{
+    padding: 5px;
+}
+
+.btn-compiler-compile{
+    outline: none;
+    background: #29aae1;
+    border: 1px solid #29aae1;
+    color: white;
+    padding: 6px 10px;
+}
+
+.btn-compiler-compile:hover{
+    color: #29aae1;
+    background: white;
+}
+
+.compiler-textarea{
+    background: url(http://i.imgur.com/2cOaJ.png);
+    background-attachment: local;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    padding-top: 10px;
+    border-color:#ccc;
+}

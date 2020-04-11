@@ -50,16 +50,16 @@
     border: none!important;
 }
 
-.mcq-box{
+/* .mcq-box{
     padding: 20px;
-}
+} */
 /************************ First edition style  ****************************/
 .mcq-box{
     border: 1px solid #ececec;
     margin: 0px 0px 15px 0px;
     border-radius: 5px;
     background: #fff;
-    padding: 15px;
+    padding: 20px;
     margin-top: 10px;
     max-height: 270px;
     overflow-x: hidden;

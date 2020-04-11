@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
     <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
-    <!-- Custom css -->
+    <!-- ict css -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    {{-- page custom css --}}
+    {{-- custom css --}}
     @yield('page-custom-css')
 
     <title>@yield('title')</title>
@@ -57,11 +57,16 @@
     <!-- body section end -->
 
 </body>
-<!-- required javascripts -->
+<!-- vendor javascripts -->
 <script src="{{ asset('assets/js/vendors.min.js') }}"></script>
-<!-- page js -->
+
+{{-- page js --}}
+@yield('page-js')
+
+<!-- all js -->
 <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
-@yield('page-js')
+<!-- custom js -->
+@yield('page-custom-js')
 
 </html>

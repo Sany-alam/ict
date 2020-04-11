@@ -42,6 +42,8 @@
 @section('page-js')
     {{-- board question page --}}
     <script src="{{ asset('assets/vendors/select2/select2.min.js') }}"></script>
+@endsection
+@section('page-custom-js')
     {{-- custom page js --}}
     <script src="{{ asset('assets\js\custom\board-question.js') }}"></script>
 @endsection

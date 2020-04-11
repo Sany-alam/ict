@@ -29,6 +29,15 @@ Route::get('Newsfeed', function () {
     return view('Newsfeed.index');
 });
 
+
+// practice & compiler page
+Route::get('practice', function () {
+    return view('Practice.index');
+});
+Route::get('practice/c-compiler',function(){
+    return view('Practice.c-compiler');
+})->name('c-compiler');
+
 // board question routes
 Route::get('board-questions','BoardquestionController@index');
 Route::get('SearchBoardQuestion/{id}','BoardquestionController@show');

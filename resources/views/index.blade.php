@@ -30,7 +30,7 @@
             </a>
         </div>
         <div class="col-md-3">
-            <a href="#">
+            <a href="{{ url('practice') }}">
             <div class="button">
                 <img src="{{ asset('assets') }}/images/icons/practise.png" alt="" class="img-fluid">
             <h3>Practice</h3>
