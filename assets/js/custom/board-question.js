@@ -10,19 +10,18 @@ $(function() {
     $("#search-board-question").click(function() {
         if ($("#boardList").val().length !== 0) {
             $.ajax({
-                processData:false,
-                contentType:false,
-                type:"get",
-                url:"SearchBoardQuestion/"+$("#boardList").val()+"",
-                success:function(data) {
+                processData: false,
+                contentType: false,
+                type: "get",
+                url: "SearchBoardQuestion/" + $("#boardList").val() + "",
+                success: function(data) {
                     trimmed = $.trim(data);
                     if (trimmed.length > 0) {
                         $("#board-mcq-no-data").hide();
                         $("#board-mcq").html(data);
                         $("#board-mcq").show();
                         // console.log(data);
-                    }
-                    else{
+                    } else {
                         console.log(data);
                         $("#board-mcq").hide();
                         $("#board-mcq-no-data").text("No question available");
@@ -33,21 +32,21 @@ $(function() {
         }
     });
 
-    // $("#board-question-form-submit").click(function() {
-    //     formdata = new FormData();
-    //     formdata.append('answer',$("#board-question-form"));
-    //     $.ajax({
-    //         processData:false,
-    //         contentType:false,
-    //         data:formdata,
-    //         dataType:"json",
-    //         url:"question_submit",
-    //         type:"POST",
-    //         success:function(data){
-    //             // alert(data);
-    //             console.log(data);
-    //         }
-    //     });
-    // });
+    $("#board-question-form-submit").click(function() {
+        formdata = new FormData();
+        formdata.append('answer', $("#board-question-form"));
+        $.ajax({
+            processData: false,
+            contentType: false,
+            data: formdata,
+            dataType: "json",
+            url: "question_submit",
+            type: "POST",
+            success: function(data) {
+                // alert(data);
+                console.log(data);
+            }
+        });
+    });
 
 });

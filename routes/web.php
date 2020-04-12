@@ -96,3 +96,6 @@ Route::get('Study/Chapter-5/Topic-16', function () {
 Route::get('Study/Chapter-5/Topic-17', function () {
     return view('Study.Topic-5.17');
 });
+
+
+Route::post('c_compiler','PracticeController@c_compiler');
