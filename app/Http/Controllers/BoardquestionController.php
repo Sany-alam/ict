@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Session;
 use App\board_list;
 use App\question;
+use App\result;
 
 class BoardquestionController extends Controller
 {
@@ -31,25 +32,25 @@ class BoardquestionController extends Controller
                         <ul>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="answer['.$query[$i]->id.']" value="'.$query[$i]->option1.'" type="radio" class="custom-control-input board_question" id="options'.$j.'1">
+                                <input name="answer['.$query[$i]->id.']" value="1" type="radio" class="custom-control-input board_question" id="options'.$j.'1">
                                 <label class="custom-control-label" for="options'.$j.'1">'.$query[$i]->option1.'</label>
                             </div>
                             </li>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="answer['.$query[$i]->id.']" value="'.$query[$i]->option2.'" type="radio" class="custom-control-input board_question" id="options'.$j.'2">
+                                <input name="answer['.$query[$i]->id.']" value="2" type="radio" class="custom-control-input board_question" id="options'.$j.'2">
                                 <label class="custom-control-label" for="options'.$j.'2">'.$query[$i]->option2.'</label>
                             </div>
                             </li>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="answer['.$query[$i]->id.']" value="'.$query[$i]->option3.'" type="radio" class="custom-control-input board_question" id="options'.$j.'3">
+                                <input name="answer['.$query[$i]->id.']" value="3" type="radio" class="custom-control-input board_question" id="options'.$j.'3">
                                 <label class="custom-control-label" for="options'.$j.'3">'.$query[$i]->option3.'</label>
                             </div>
                             </li>
                             <li>
                             <div class="custom-control custom-radio">
-                                <input name="answer['.$query[$i]->id.']" value="'.$query[$i]->option4.'" type="radio" class="custom-control-input board_question" id="options'.$j.'4">
+                                <input name="answer['.$query[$i]->id.']" value="4" type="radio" class="custom-control-input board_question" id="options'.$j.'4">
                                 <label class="custom-control-label" for="options'.$j.'4">'.$query[$i]->option4.'</label>
                             </div>
                             </li>
@@ -60,24 +61,30 @@ class BoardquestionController extends Controller
     }
 
     public function question_submit(Request $request)
-    {   $right = 0;
+    {
+        Session::put('search_questions',$request->answer);
+        date_default_timezone_set('Asia/Dhaka');
+        $right = 0;
         $wrong = 0;
         $total = 0;
+        $correct_answer_question_id = array();
+        $wrong_answer_question_id = array();
         foreach($request->answer as $option_num => $option_val){
-
             //  $myfile = fopen("file.txt", "a+") or die("Unable to open file!");
             //  fwrite($myfile,$option_num." ".$option_val."\n");
-
              $question = question::where('id',$option_num)->first();
-             if ($question->correct_option === $option_val) {
+             if ($question->correct_option == $option_val) {
+                array_push($correct_answer_question_id,$question->id);
                 $right = $right+1;
              }
              else {
                 $wrong = $wrong+1;
+                array_push($wrong_answer_question_id,$question->id);
              }
-
              $total = $total+1;
         }
-        return view('Questions.SubmitQuestion',['right'=>$right,'wrong'=>$wrong,'total'=>$total]);
+       $result = result::create(['user_id'=>1,'total_question'=>$total,'correct_answer'=>$right,'wrong_answer'=>$wrong,'correct_answer_question_id'=>json_encode($correct_answer_question_id),'wrong_answer_question_id'=>json_encode($wrong_answer_question_id)]);
+        // $result = result::find(1);
+        return view('Questions.SubmitQuestion',['result'=>$result]);
     }
 }

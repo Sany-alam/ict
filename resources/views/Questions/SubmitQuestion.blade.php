@@ -15,16 +15,18 @@
     <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
     <!-- box title -->
     <a href="#">Test</a>
-    </div>
+</div>
     <!-- box body -->
-    <div class="page-body">
-        <!-- single mcq -->
-        <div class="mcq-box">
-            <h2 class="text-center text-light-primary">Your result is</h2>
-            <p class="text-center">Right answer {{ $right }} And wrong answer {{ $wrong }}</p>
-            <p class="text-center">Total answer {{ $total }}</p>
-        </div>
+<div class="page-body">
+    <!-- single mcq -->
+    <div class="mcq-box">
+        <h2 class="text-center text-light-primary">Your result is</h2>
+        <p class="text-center">Right answer {{ $result->correct_answer }} And wrong answer {{ $result->wrong_answer }}</p>
+        <p class="text-center">Total answer {{ $result->total_question }}</p>
+
+
     </div>
+</div>
 @endsection
 @section('page-js')
     {{-- board question page --}}

@@ -28,6 +28,7 @@ return array(
     'App\\board_list' => $baseDir . '/app/board_list.php',
     'App\\chapter' => $baseDir . '/app/chapter.php',
     'App\\question' => $baseDir . '/app/question.php',
+    'App\\result' => $baseDir . '/app/result.php',
     'App\\topic' => $baseDir . '/app/topic.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',
