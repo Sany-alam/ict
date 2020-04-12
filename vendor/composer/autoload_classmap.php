@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\BoardquestionController' => $baseDir . '/app/Http/Controllers/BoardquestionController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
@@ -26,6 +27,7 @@ return array(
     'App\\board_list' => $baseDir . '/app/board_list.php',
     'App\\chapter' => $baseDir . '/app/chapter.php',
     'App\\question' => $baseDir . '/app/question.php',
+    'App\\result' => $baseDir . '/app/result.php',
     'App\\topic' => $baseDir . '/app/topic.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',

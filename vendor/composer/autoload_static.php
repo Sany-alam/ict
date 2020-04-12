@@ -470,6 +470,7 @@ class ComposerStaticInit0e02b113eb97a6455fa63011258e3362
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\BoardquestionController' => __DIR__ . '/../..' . '/app/Http/Controllers/BoardquestionController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -488,6 +489,7 @@ class ComposerStaticInit0e02b113eb97a6455fa63011258e3362
         'App\\board_list' => __DIR__ . '/../..' . '/app/board_list.php',
         'App\\chapter' => __DIR__ . '/../..' . '/app/chapter.php',
         'App\\question' => __DIR__ . '/../..' . '/app/question.php',
+        'App\\result' => __DIR__ . '/../..' . '/app/result.php',
         'App\\topic' => __DIR__ . '/../..' . '/app/topic.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack/CorsService.php',
