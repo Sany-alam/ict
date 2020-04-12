@@ -29,7 +29,7 @@ void main()
 </div>
 @endsection
 @section('page-custom-js')
-<script src="{{ asset('assets') }}/js/custom/ccompiler.js?{{ time() }}"></script>
+<script src="{{ asset('assets/js/custom/ccompiler.js') }}"></script>
 
 
 @endsection

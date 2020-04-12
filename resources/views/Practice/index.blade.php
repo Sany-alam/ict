@@ -12,7 +12,7 @@
           </div>
           <!-- box body -->
           <div class="page-body">
-              <a href="{{ route('c-compiler')}}">Go to C-compiler</a>
+              <a href="{{ url('practice/c_compiler')}}">Go to C-compiler</a>
           </div>
 
 

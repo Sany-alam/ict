@@ -34,9 +34,10 @@ Route::get('Newsfeed', function () {
 Route::get('practice', function () {
     return view('Practice.index');
 });
-Route::get('practice/c-compiler',function(){
-    return view('Practice.c-compiler');
-})->name('c-compiler');
+Route::prefix('practice')->group(function () {
+    Route::get('c_compiler','PracticeController@index');
+    Route::post('c_complier','PracticeController@c_compiler');
+});
 
 // board question routes
 Route::get('board-questions','BoardquestionController@index');
@@ -98,4 +99,4 @@ Route::get('Study/Chapter-5/Topic-17', function () {
 });
 
 
-Route::post('c_compiler','PracticeController@c_compiler');
+// Route::post('c_compiler','PracticeController@c_compiler');

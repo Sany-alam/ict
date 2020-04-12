@@ -40,7 +40,7 @@ class PracticeController extends Controller
         }
      }
 
-    public function ccompiler(Request $request)
+    public function c_compiler(Request $request)
     {
        $code = $request->code;
         return $code;
@@ -48,4 +48,8 @@ class PracticeController extends Controller
      // return $token;
     }
 
+    public function index()
+    {
+        return view('Practice\c-compiler');
+    }
 }
