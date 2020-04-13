@@ -43,6 +43,7 @@ Route::prefix('practice')->group(function () {
 Route::get('board-questions','BoardquestionController@index');
 Route::get('SearchBoardQuestion/{id}','BoardquestionController@show');
 Route::post('question_submit','BoardquestionController@question_submit');
+Route::get('CorrectAnswers','BoardquestionController@correctanswers');
 
 
 // Study topic pages
