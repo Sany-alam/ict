@@ -95,7 +95,9 @@ class BoardquestionController extends Controller
         foreach ($data as $key => $value) {
             $singleQuestion = question::where('id',$key)->first();
             array_push($array, $singleQuestion);
+            //file_put_contents('test.txt',$singleQuestion);
         }
+
         return view('Questions.CorrectAnswers',['answers'=>$array]);
     }
 }

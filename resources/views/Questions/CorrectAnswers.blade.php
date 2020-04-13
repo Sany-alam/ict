@@ -24,10 +24,14 @@
 <!-- box body -->
 <div class="page-body">
     <div class="mcq-box">
+        <?php
+            $j = 1;
+        ?>
         @foreach($answers as $value)
+
         <div class="single-mcq text-left">
             <h4 class="text-light-primary question">
-                <span class="question-no">{{ $value->id }}</span>
+                <span class="question-no">{{ $j++ }}</span>
                 <span class="question-mcq">{{ $value->question }}</span>
             </h4>
             <ul>
@@ -53,6 +57,7 @@
             <p class="text-light-primary text-left">ব্যাখ্যাঃ {{ $value->details }}</p>
             @endif
         </div>
+
         @endforeach
     </div>
 </div>
