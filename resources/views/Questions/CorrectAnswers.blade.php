@@ -4,6 +4,13 @@
 @endsection
 @section('page-custom-css')
     <link rel="stylesheet" href="{{ asset('assets\css\custom\boardquestion.css') }}">
+    <style type="text/css">
+        .right_answer:checked~.custom-control-label::before {
+            color: #7ac943;
+            border-color: #7ac943;
+            background-color: #7ac943;
+        }
+    </style>
 @endsection
 @section('content')
 
@@ -17,7 +24,7 @@
 <!-- box body -->
 <div class="page-body">
     <div class="mcq-box">
-        @foreach($answers as $key => $value)
+        @foreach($answers as $value)
         <div class="single-mcq text-left">
             <h4 class="text-light-primary question">
                 <span class="question-no">{{ $value->id }}</span>
@@ -25,18 +32,26 @@
             </h4>
             <ul>
                 @for($i=1;$i<5;$i++)
-                <li>
-                    <div class="custom-control custom-radio">
-                        @if($value->correct_option == $i)
-                        <input name="{{ $value->id }}" value="{{ $i }}" type="radio" class="custom-control-input board_question" checked="true">
-                        @else
-                        <input name="{{ $value->id }}" value="{{ $i }}" type="radio" class="custom-control-input board_question" checked="false">
-                        @endif
-                        <label class="custom-control-label">{{ $value->option1 }}</label>
-                    </div>
-                </li>
+                    @if('value="'.$i.'"' == 'value="'.$value->correct_option.'"')
+                    <li>
+                        <div class="custom-control custom-radio">
+                            <input name="answer{{ $value->id }}" value="{{$i}}" type="radio" class="custom-control-input board_question right_answer" id="options{{$i}}" checked="true">
+                            <label class="custom-control-label" for="options{{$i}}">{{ $value->{'option'.$i} }}</label>
+                        </div>
+                    </li>
+                    @else
+                    <li>
+                        <div class="custom-control custom-radio">
+                            <input name="answer{{ $value->id }}" value="{{$i}}" type="radio" class="custom-control-input board_question wrong_answer" id="options{{$i}}">
+                            <label class="custom-control-label" for="options{{$i}}">{{ $value->{'option'.$i} }}</label>
+                        </div>
+                    </li>
+                    @endif
                 @endfor
             </ul>
+            @if(!empty($value->details))
+            <p class="text-light-primary text-left">ব্যাখ্যাঃ {{ $value->details }}</p>
+            @endif
         </div>
         @endforeach
     </div>
