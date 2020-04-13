@@ -40,11 +40,48 @@ class PracticeController extends Controller
         }
      }
 
+
+     public function get_output($token)
+     {
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+          CURLOPT_URL => "https://api.judge0.com/submissions/".$token."?base64_encoded=true",
+          CURLOPT_RETURNTRANSFER => true,
+          CURLOPT_ENCODING => "",
+          CURLOPT_MAXREDIRS => 10,
+          CURLOPT_TIMEOUT => 30,
+          CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+          CURLOPT_CUSTOMREQUEST => "GET",
+          CURLOPT_HTTPHEADER => array(
+            "cache-control: no-cache",
+            "postman-token: 62899d1a-b596-1f38-dd72-76659354e5ed"
+          ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        curl_close($curl);
+
+        if ($err) {
+          echo "cURL Error #:" . $err;
+        } else {
+          echo $response;
+        }
+     }
+
     public function c_compiler(Request $request)
     {
        $code = $request->code;
-        return $code;
-     // $token = $this->get_token($code);
+        //return $code;
+      $token = $this->get_token($code);
+      $token = json_decode($token);
+      $final_token = $token->token;
+
+      $output = $this->get_output($final_token);
+
+      file_put_contents('test.txt',$final_token);
      // return $token;
     }
 
