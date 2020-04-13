@@ -32,21 +32,4 @@ $(function() {
         }
     });
 
-    $("#board-question-form-submit").click(function() {
-        formdata = new FormData();
-        formdata.append('answer', $("#board-question-form"));
-        $.ajax({
-            processData: false,
-            contentType: false,
-            data: formdata,
-            dataType: "json",
-            url: "question_submit",
-            type: "POST",
-            success: function(data) {
-                // alert(data);
-                console.log(data);
-            }
-        });
-    });
-
 });

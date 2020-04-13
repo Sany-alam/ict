@@ -62,7 +62,7 @@ class BoardquestionController extends Controller
 
     public function question_submit(Request $request)
     {
-        Session::put('search_questions',$request->answer);
+        Session::put('submit_search_questions',$request->answer);
         date_default_timezone_set('Asia/Dhaka');
         $right = 0;
         $wrong = 0;
@@ -86,5 +86,16 @@ class BoardquestionController extends Controller
        $result = result::create(['user_id'=>1,'total_question'=>$total,'correct_answer'=>$right,'wrong_answer'=>$wrong,'correct_answer_question_id'=>json_encode($correct_answer_question_id),'wrong_answer_question_id'=>json_encode($wrong_answer_question_id)]);
         // $result = result::find(1);
         return view('Questions.SubmitQuestion',['result'=>$result]);
+    }
+
+    public function correctanswers()
+    {
+        $data = Session::get('submit_search_questions');
+        $array = array();
+        foreach ($data as $key => $value) {
+            $singleQuestion = question::where('id',$key)->first();
+            array_push($array, $singleQuestion);
+        }
+        return view('Questions.CorrectAnswers',['answers'=>$array]);
     }
 }
