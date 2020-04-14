@@ -24,9 +24,9 @@
 <!-- box body -->
 <div class="page-body">
     <div class="mcq-box">
-        <?php
-            $j = 1;
-        ?>
+            @php
+                $j = 1;
+            @endphp
         @foreach($answers as $value)
 
         <div class="single-mcq text-left">
@@ -39,15 +39,15 @@
                     @if('value="'.$i.'"' == 'value="'.$value->correct_option.'"')
                     <li>
                         <div class="custom-control custom-radio">
-                            <input name="answer{{ $value->id }}" value="{{$i}}" type="radio" class="custom-control-input board_question right_answer" id="options{{$i}}" checked="true">
-                            <label class="custom-control-label" for="options{{$i}}">{{ $value->{'option'.$i} }}</label>
+                            <input name="answer{{ $value->id }}" value="{{$i}}" type="radio" class="custom-control-input board_question right_answer" id="options{{ $value->id }}{{$i}}" checked="true">
+                            <label class="custom-control-label" for="options{{ $value->id }}{{$i}}">{{ $value->{'option'.$i} }}</label>
                         </div>
                     </li>
                     @else
                     <li>
                         <div class="custom-control custom-radio">
-                            <input name="answer{{ $value->id }}" value="{{$i}}" type="radio" class="custom-control-input board_question wrong_answer" id="options{{$i}}">
-                            <label class="custom-control-label" for="options{{$i}}">{{ $value->{'option'.$i} }}</label>
+                            <input name="answer{{ $value->id }}" value="{{$i}}" type="radio" class="custom-control-input board_question wrong_answer" id="options{{ $value->id }}{{$i}}" disabled>
+                            <label class="custom-control-label" for="options{{ $value->id }}{{$i}}">{{ $value->{'option'.$i} }}</label>
                         </div>
                     </li>
                     @endif
@@ -65,7 +65,4 @@
 @section('page-js')
 @endsection
 @section('page-custom-js')
-<script type="text/javascript">
-    // $("#")
-</script>
 @endsection
