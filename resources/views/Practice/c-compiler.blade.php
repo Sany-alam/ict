@@ -11,11 +11,11 @@
     <!-- back button -->
     <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
     <!-- box title -->
-    <a href="#">Study</a>
+    <a href="#">C Compiler</a>
 </div>
 <!-- box body -->
 <div class="page-body">
-    <textarea class="form-control text-left compiler-textarea" id='code' cols="10" rows="10">#include<stdio.h>
+    <textarea class="form-control text-left" id='code' cols="10" rows="10">#include<stdio.h>
 void main()
 {
 
@@ -30,7 +30,5 @@ void main()
 @endsection
 @section('page-custom-js')
 <script src="{{ asset('assets') }}/js/custom/ccompiler.js?{{ time() }}"></script>
-
-
 @endsection
 
