@@ -67,7 +67,7 @@ class PracticeController extends Controller
         if ($err) {
           echo "cURL Error #:" . $err;
         } else {
-          echo $response;
+          return $response;
         }
      }
 
@@ -75,13 +75,48 @@ class PracticeController extends Controller
     {
        $code = $request->code;
         //return $code;
+       try{
       $token = $this->get_token($code);
       $token = json_decode($token);
       $final_token = $token->token;
-
+      sleep(3);
       $output = $this->get_output($final_token);
+      $output = json_decode($output);
+      //file_put_contents('test.txt',json_encode($output));
 
-      file_put_contents('test.txt',$final_token);
+      $final_output = base64_decode($output->stdout);
+      if($output->stdout ===null)
+      {
+        //  file_put_contents('test.txt','yes');
+
+          $error_message = base64_decode($output->compile_output);
+          $error_type = $output->status->description;
+      }
+       }
+       catch(Exception $e)
+       {
+
+       }
+
+
+
+      if($output->stdout===null)
+      {
+          if($error_message)
+          //file_put_contents('test.txt','yes'." ".$error_message);
+      return $error_type."\n". $error_message;
+      else
+        return "Some error occured. Please try again after sometime";
+      }
+
+      else
+      {
+
+          return $final_output;
+
+      }
+
+     // file_put_contents('test.txt',$output);
      // return $token;
     }
 

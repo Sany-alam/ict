@@ -15,7 +15,7 @@
 </div>
 <!-- box body -->
 <div class="page-body">
-    <textarea class="form-control text-left compiler-textarea" id='code' cols="10" rows="10">#include <stdio.h>
+    <textarea class="form-control text-left compiler-textarea" id='code' cols="10" rows="10">#include<stdio.h>
 void main()
 {
 
@@ -29,7 +29,7 @@ void main()
 </div>
 @endsection
 @section('page-custom-js')
-<script src="{{ asset('assets/js/custom/ccompiler.js') }}"></script>
+<script src="{{ asset('assets') }}/js/custom/ccompiler.js?{{ time() }}"></script>
 
 
 @endsection

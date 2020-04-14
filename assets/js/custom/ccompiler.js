@@ -25,7 +25,7 @@ $(function() {
             url: "c_complier",
             type: "POST",
             success: function(data) {
-                alert(data);
+                $("#compiler-output").html(data);
                 //console.log(data);
             }
         });
