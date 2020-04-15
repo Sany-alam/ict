@@ -49,7 +49,7 @@
                             </a>
                         </div>
                         <div class="col-md-4">
-                            <a title="SQL" href="" class="box-link">
+                            <a title="SQL" href="{{ url('practice/sql')}}" class="box-link">
                                 <img src="{{asset('assets/images/icons/sql.jpeg')}}" alt="sql">
                                 <h3>SQL</h3>
                             </a>

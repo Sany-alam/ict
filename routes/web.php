@@ -35,7 +35,8 @@ Route::prefix('practice')->group(function () {
     Route::get('/','PracticeController@index');
     Route::get('c_compiler','PracticeController@c_compiler_index');
     Route::post('c_complier','PracticeController@c_compiler');
-    Route::get('html','PracticeController@html_indec');
+    Route::get('html','PracticeController@html_index');
+    Route::get('sql','PracticeController@sql_index');
 });
 
 // board question routes

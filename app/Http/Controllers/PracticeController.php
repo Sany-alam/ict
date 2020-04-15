@@ -135,10 +135,17 @@ class PracticeController extends Controller
 
     // **************** start html *****************************
 
-    public function html_indec()
+    public function html_index()
     {
         return view('Practice\html');
     }
 
     // **************** end html *****************
+
+    // ***************** start sql ******************
+
+    public function sql_index()
+    {
+        return view('Practice\sql');
+    }
 }
