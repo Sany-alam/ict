@@ -43,7 +43,7 @@
                             </a>
                         </div>
                         <div class="col-md-4">
-                            <a title="HTML" href="" class="box-link">
+                            <a title="HTML" href="{{ url('practice/html')}}" class="box-link">
                                 <img src="{{asset('assets/images/icons/html.jpeg')}}" alt="html">
                                 <h3>HTML</h3>
                             </a>

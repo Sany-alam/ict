@@ -59,6 +59,7 @@
 </body>
 <!-- vendor javascripts -->
 <script src="{{ asset('assets/js/vendors.min.js') }}"></script>
+<script src="{{ asset('assets/vendors/sweetalert/sweetalert.js') }}"></script>
 
 {{-- page js --}}
 @yield('page-js')
@@ -68,5 +69,24 @@
 
 <!-- custom js -->
 @yield('page-custom-js')
-
+<script>
+    $(document).ajaxStart(function() {
+        swal({
+            //  title: "Loading...",
+            //  text: "Please wait",
+            icon: "{{asset('assets/images/icons/loading-gif-png-5.gif')}}",
+            button: false,
+            closeOnClickOutside: false,
+            closeOnEsc: false,
+        });
+        $(".swal-modal").css('background-color', 'rgba(0,0,0,0.0)');
+        $(".swal-overlay").css('background-color', 'rgba(0,0,0,0.8)');
+        $('.swal-icon').css({
+            "height":"180px",
+        });
+    });
+    $(document).ajaxStop(function() {
+        swal.close();
+    });
+</script>
 </html>

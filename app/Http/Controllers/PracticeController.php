@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class PracticeController extends Controller
 {
+    public function index()
+    {
+        return view('Practice.index');
+    }
+
+    // **************start c-compiler***************
 
      public function get_token($code)
      {
@@ -120,8 +126,19 @@ class PracticeController extends Controller
      // return $token;
     }
 
-    public function index()
+    public function c_compiler_index()
     {
         return view('Practice\c-compiler');
     }
+
+    //***************** end c compiler ******************/
+
+    // **************** start html *****************************
+
+    public function html_indec()
+    {
+        return view('Practice\html');
+    }
+
+    // **************** end html *****************
 }

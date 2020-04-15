@@ -30,13 +30,12 @@ Route::get('Newsfeed', function () {
 });
 
 
-// practice & compiler page
-Route::get('practice', function () {
-    return view('Practice.index');
-});
+// practice page
 Route::prefix('practice')->group(function () {
-    Route::get('c_compiler','PracticeController@index');
+    Route::get('/','PracticeController@index');
+    Route::get('c_compiler','PracticeController@c_compiler_index');
     Route::post('c_complier','PracticeController@c_compiler');
+    Route::get('html','PracticeController@html_indec');
 });
 
 // board question routes
