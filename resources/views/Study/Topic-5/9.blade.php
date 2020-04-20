@@ -6,15 +6,15 @@
 
     <!-- required css files -->
     <!-- bootstrap css files -->
-    <link rel="stylesheet" href="../../assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="../../assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- required javascripts -->
-    <script src="../../assets/js/vendors.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="{{ asset('assets/js/vendors.min.js') }}"></script> 
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <title>Document</title>
 </head>
@@ -61,31 +61,49 @@
             <!-- back button -->
             <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
             <!-- box title -->
-            <a href="#">5.6.1 Topic - if স্টেটমেন্ট</a>
+            <a href="#">৫.৬.১ - if স্টেটমেন্ট</a>
           </div>
           <!-- box body -->
           <div class="page-body">
-              <div class="topic-parts">
-                  <p class="question text-light-primary">if কি? এবং কেন!</p>
+              <div class="topic-parts-imp">
+                  <p class="question text-light-primary">if কি? এবং কেন!</p><hr>
                   <p class="">সি ভাষায় if স্টেটমেন্ট কে 'যদি' জাতীয় কাজ করতে ব্যবহার করা হয়। কোনো একটা কন্ডিশন বা শর্ত এর উপর ভিত্তি করে if কাজ করে। লেখার নিয়মঃ</p>
-                  <p class="">if (condition) <br>
-                    { <br>
-                        // some works <br>
-                    } <br>
-                    // other works</p>
+                  </div>
+                  <div class="topic-parts-code">
+                  <h1>
+                  if (condition)<br>
+                  { </h1>
+                  <h2>&nbsp;&nbsp;&nbsp;// some works</h2>
+                  <h1>}</h1>
+                  <h2>// other works</h2> 
+                  </div>
+
+                  <div class="topic-parts">
                   <p class="">এখানে যেকোনো একটা কন্ডিশন যদি সত্য হয় তাহলে if স্টেটমেন্ট এর পর "some works" এ যাবে এবং এর পর "other works" এ যাবে, আর যদি কন্ডিশন মিথ্যা হয় তাহলে সরাসরি "other works" এ চলে যাবে।</p>
                   <p class=""><b>উদাহরনঃ</b></p>
-                  <ol>
-                    <li>int a = 10;</li>
-                    <li>if(a < 15)</li>
-                    <li>{</li>
-                    <li>printf("less then 15");</li>
-                    <li>}</li>
-                    <li>printf("ok!");</li>
-                    <li>less then 15</li>
-                  </ol>
+                  </div>
+                  <div class="topic-parts-code">
+                  <h1>
+                  int a = 10 ;<br>
+                  if(a < 15)<br>
+                  {<br>
+                  &nbsp;&nbsp;&nbsp;printf(" less then 15 ");<br>
+                  }<br>
+                  printf("ok!");
+                  </h1>
+                  </div>
+                  <div class="topic-parts-code-ans">
+                    <p>ফলাফল :<br>
+                    less then 15
+                    </p>
+                 </div>
+
+                 <div class="topic-parts">
                   <p class="">এখানে ১নং লাইনে ভ্যারিয়েবল a তে একটি সংখ্যা 10 রাখা আছে। এরপর ৩নং লাইনে if এ চেক করা হয়েছে a এর মান 15 থেকে কম নাকি। এই কন্ডিশন টি সত্য, কারন a এর মান 15 থেকে ছোট। তাই if স্টেটমেন্ট এর ভিতরে (৫নং লাইনের) printf() কাজ টি করবে এরপর এর নিচে বাইরের (৮নং লাইনের) printf() কাজ টি করবে। যদি a এর মান 15 থেকে বেশি হত তাহলে if স্টেটমেন্ট এর ভিতরে ডুকবে না, কারন কন্ডিশন মিথ্যা হবে। শুধু ব্র্যাকেট্ম এর বাইরের printf() এর কাজ করবে।</p>
-                  <p class=""><b>নোট</b> : if স্টেটমেন্ট কন্ডিশন সত্য হলে এর পর কৌনিক ব্র্যাকেট "{}" এর ভিতর সব কাজ করবে, এরপর পরের কাজে যাবে। আর মিথ্যা হলে কৌনিক ব্র্যাকেট এর ভিতরের কাজগুলো করবে না, সরাসরি পরের কাজে চলে যাবে।</p>
+                  </div>
+                  
+                  <div class="topic-parts-imp">
+                  <p class="">if স্টেটমেন্ট কন্ডিশন সত্য হলে এর পর কৌনিক ব্র্যাকেট "{}" এর ভিতর সব কাজ করবে, এরপর পরের কাজে যাবে। আর মিথ্যা হলে কৌনিক ব্র্যাকেট এর ভিতরের কাজগুলো করবে না, সরাসরি পরের কাজে চলে যাবে।</p>
               </div>
               <div class="topic-arrow-buttons">
                   <div class="topic-back">

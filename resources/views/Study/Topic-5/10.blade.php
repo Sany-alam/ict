@@ -6,15 +6,15 @@
 
     <!-- required css files -->
     <!-- bootstrap css files -->
-    <link rel="stylesheet" href="../../assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="../../assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- required javascripts -->
-    <script src="../../assets/js/vendors.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="{{ asset('assets/js/vendors.min.js') }}"></script> 
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <title>Document</title>
 </head>
@@ -61,37 +61,54 @@
             <!-- back button -->
             <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
             <!-- box title -->
-            <a href="#">5.6.2 Topic - if...else স্টেটমেন্ট</a>
+            <a href="#">৫.৬.২ - if...else স্টেটমেন্ট</a>
           </div>
           <!-- box body -->
           <div class="page-body">
-              <div class="topic-parts">
-                  <p class="question text-light-primary">if...else কি? কেন?</p>
+          <div class="topic-parts-imp">
+                  <p class="question text-light-primary">if...else কি? কেন?</p><hr>
                   <p class="">if...else এর ক্ষেত্রে কোনো একটা কন্ডিশন বা শর্ত সত্য হলে একটা কাজ করবে আবার মিথ্যা হলে আরেকটি কাজ করবে। লেখার নিয়মঃ</p>
-                  <p class="">if (condition) <br>
-                    { <br>
-                        // work 1 <br>
-                    } <br>
-                    else <br>
-                    { <br>
-                        // work 2 <br>
-                    }</p>
+                  </div>
+                  <div class="topic-parts-code">
+                  <h1>
+                  if (condition)<br>
+                  {</h1>
+                  <h2>&nbsp;&nbsp;&nbsp;// work 1</h2>
+                  <h1>}<br>
+                  else<br>
+                  {</h1>
+                  <h2>&nbsp;&nbsp;&nbsp;// work 2</h2>
+                  <h1>}</h1>
+                  </div>
+
+                  <div class="topic-parts">
                   <p class="">এখানে condition যদি সত্য হয় তাহলে work 1 করবে আর যদি condition মিথ্যা হয় তাহলে work 2 করবে।</p>
                   <p class=""><b>উদাহরনঃ</b></p>
-                  <ol>
-                    <li>int a = 10;</li>
-                    <li>if(a < 15)</li>
-                    <li>{</li>
-                    <li>printf("less then 15");</li>
-                    <li>}</li>
-                    <li>else</li>
-                    <li>{</li>
-                    <li>printf("not less then 15");</li>
-                    <li>} </li>
-                  </ol>
-                  <p class=""><b>ফলাফলঃ </b> less then 15</p>
-                  <p class="">এখানে ১নং লাইনে ভ্যারিয়েবল a তে একটি সংখ্যা 10 রাখা আছে। এরপর ৩নং লাইনে if এ চেক করা হয়েছে a এর মান 15 থেকে কম নাকি। এই কন্ডিশন টি সত্য, কারন a এর মান 15 থেকে ছোট। তাই if স্টেটমেন্ট এর ভিতরের (৫নং লাইনের) printf() কাজ টি করবে। আর যদি কন্ডিশন টি মিথ্যা হত অর্থাৎ x এর মান 15 থেকে বেশি হত তাহলে else এর পরের (৯নং লাইনের) printf() কাজ করত।</p>
-              </div>
+                  </div>
+                  <div class="topic-parts-code">
+                  <h1>
+                  int a = 10 ;<br>
+                  if(a < 15)<br>
+                  {<br>
+                  &nbsp;&nbsp;&nbsp;printf(" less then 15 ");<br>
+                  }<br>
+                  else<br>
+                  {<br>
+                  &nbsp;&nbsp;&nbsp;printf(" not less then 15 ");<br>
+                  }
+                  </h1>
+                  </div>
+                  <div class="topic-parts-code-ans">
+                    <p>ফলাফল :<br>
+                    less then 15
+                    </p>
+                 </div>
+
+                 <div class="topic-parts">
+                  <p class="">এখানে ১নং লাইনে ভ্যারিয়েবল a তে একটি সংখ্যা 10 রাখা আছে। এরপর ৩নং লাইনে if এ চেক করা হয়েছে a এর মান 15 থেকে কম নাকি। এই কন্ডিশন টি সত্য, কারন a এর মান 15 থেকে ছোট। তাই if স্টেটমেন্ট এর ভিতরের printf() কাজ টি করবে। আর যদি কন্ডিশন টি মিথ্যা হত অর্থাৎ x এর মান 15 থেকে বেশি হত তাহলে else এর পরের printf() কাজ করত।</p>
+                  </div>
+                  
+
               <div class="topic-arrow-buttons">
                   <div class="topic-back">
                     <button>

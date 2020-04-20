@@ -6,15 +6,15 @@
 
     <!-- required css files -->
     <!-- bootstrap css files -->
-    <link rel="stylesheet" href="../../assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="../../assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- required javascripts -->
-    <script src="../../assets/js/vendors.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="{{ asset('assets/js/vendors.min.js') }}"></script> 
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <title>Document</title>
 </head>
@@ -61,52 +61,70 @@
             <!-- back button -->
             <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
             <!-- box title -->
-            <a href="#">5.6.3 Topic - else...if স্টেটমেন্ট</a>
+            <a href="#">৫.৬.৩ - else...if স্টেটমেন্ট</a>
           </div>
           <!-- box body -->
           <div class="page-body">
-              <div class="topic-parts">
-                  <p class="question text-light-primary">else...if কি? কেন?</p>
+
+          <div class="topic-parts-imp">
+                  <p class="question text-light-primary">else...if কি? কেন?</p><hr>
                   <p class="">else...if ব্যবহার করা হয় যদি দুই এর অধিক শর্ত থাকে। প্রতি শর্ত এর জন্য যদি আলাদা কাজ করতে হয় তাহলে এই স্টেস্টমেন্ট ব্যবহার করা হয়। লেখার নিয়মঃ</p>
-                  <p class="">if (condition 1) <br>
-                    { <br>
-                        // work 1 <br>
-                    } <br>
-                    elseif(condition 2) <br>
-                    { <br>
-                        // work 2 <br>
-                    } <br>
-                    elseif(condition 3) <br>
-                    { <br>
-                        // work 3 <br>
-                    } <br>
-                    else <br>
-                    { <br>
-                        // work 4 <br>
-                    }</p>
+                  </div>
+                  
+                  <div class="topic-parts-code">
+                  <h1>
+                  if (condition 1)<br>
+                  {</h1>
+                  <h2>&nbsp;&nbsp;&nbsp;// work 1</h2>
+                  <h1>}<br>
+                  elseif(condition 2)<br>
+                  {</h1>
+                  <h2>&nbsp;&nbsp;&nbsp;// work 2</h2>
+                  <h1>}<br>
+                  elseif(condition 3)<br>
+                  {</h1>
+                  <h2>&nbsp;&nbsp;&nbsp;// work 3</h2>
+                  <h1>}<br>
+                  else<br>
+                  {</h1>
+                  <h2>&nbsp;&nbsp;&nbsp;// work 4</h2>
+                  <h1>}</h1>
+                  </div>
+
+                  <div class="topic-parts">
                   <p class="">এখানে ৩ টা শর্ত এর উপর কাজ করা হয়েছে। condition 1 সত্য হলে work 1 করবে, condition 2 সত্য হলে work 2 করবে, condition 3 সত্য হলে work 3 করবে আর কোনো কন্ডিশবন সত্য না হলে work 4 করবে।</p>
                   <p class=""><b>উদাহরনঃ</b></p>
-                  <ol>
-                    <li>    int a, b;</li>
-                    <li>    a = 10;</li>
-                    <li>    b = 20;</li>
-                    <li></li>
-                    <li>    if (a > b)</li>
-                    <li>    {</li>
-                    <li>       prinf("a is greater");</li>
-                    <li>    }</li>
-                    <li>    elseif(b > a)</li>
-                    <li>    {</li>
-                    <li>       prinf("b is greater");</li>
-                    <li>    }</li>
-                    <li>    else</li>
-                    <li>    {</li>
-                    <li>       printf("a is equal to b");</li>
-                    <li>    }</li>
-                  </ol>
-                  <p class=""><b>ফলাফলঃ</b> b is greater</p>
+                  </div>
+                  
+                  <div class="topic-parts-code">
+                  <h1>int a, b;<br>
+                  a = 10;<br>
+                  b = 20;<br><br>
+                  if ( a > b )<br>
+                  {<br>
+                  &nbsp;&nbsp;&nbsp;prinf(" a is greater ") ;<br>
+                  }<br>
+                  elseif( b > a )<br>
+                  {<br>
+                  &nbsp;&nbsp;&nbsp;prinf(" b is greater ") ;<br>
+                  }<br>
+                  else<br>
+                  {<br>
+                  &nbsp;&nbsp;&nbsp;prinf(" a is equal to b ") ;<br>
+                  }</h1>
+                  </div>
+                  
+                  <div class="topic-parts-code-ans">
+                    <p>ফলাফল :<br>
+                    b is greater
+                    </p>
+                 </div>
+
+                 <div class="topic-parts">
                   <p class="">১ থেকে ৩ নং লাইনে ২ টা variable a, b ঘোষনা করা হয়েছে এবং সেগুলোতে যথাক্রমে 10 এবং 20 রাখা হয়েছে। এরপর ২ টা শর্ত চেক করা হয়েছে, যদি a, b থেকে বড় হত তাহলে ৭নং লাইনের printf() কাজ করে ফেলত, কিন্তু a, b থেকে বড় না তাই পরের টা চেক করবে, এই ক্ষেত্রে b > a এই শর্ত সত্য তাই ১১নং লাইনের printf() কাজ করবে আর নিচে যাবে না।</p>
-              </div>
+                  </div>
+          
+
               <div class="topic-arrow-buttons">
                   <div class="topic-back">
                     <button>

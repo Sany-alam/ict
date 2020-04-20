@@ -6,15 +6,15 @@
 
     <!-- required css files -->
     <!-- bootstrap css files -->
-    <link rel="stylesheet" href="../../assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="../../assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- required javascripts -->
-    <script src="../../assets/js/vendors.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="{{ asset('assets/js/vendors.min.js') }}"></script> 
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <title>Document</title>
 </head>
@@ -61,25 +61,38 @@
             <!-- back button -->
             <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
             <!-- box title -->
-            <a href="#">5.3 Topic - ভ্যারিয়েবল</a>
+            <a href="#">৫.৩ ভ্যারিয়েবল</a>
           </div>
           <!-- box body -->
           <div class="page-body">
-              <div class="topic-parts">
-                  <p class="question text-light-primary">ভ্যারিয়েবল কি? ও কিভাবে ভ্যারিয়েবল ঘোষনা করা হয়?</p>
-                  <p class="">Variable মানে চলক। যার মান পরিবতর্ন হয় তাকেই চলক বা ভেরিয়েবল বলে।</p>
-                  <p class="">সি ভাষায় ডেটা নিয়ে কাজ করার জন্য ভ্যারিয়েবল ব্যবহার করতে হয়। ডেটা গুলোকে বিভিন্ন ভ্যারিয়েবল এ সংরক্ষন করে কাজ করতে হয়।</p>
-                  <p class="">ভ্যারিয়েবল ঘোষনা বা ডিক্লারেশন এর জন্য ডাটাটাইপ প্রয়োজন। আমাদের কাজের জন্য যে টাইপ এর ডেটা দরকার সেই ডেটাটাইপ লিখে এর সাথে যেকোনো নাম দিলেই ভ্যারিয়েবল ডিক্লারেশন হয়ে যাবে এবং প্রোগ্রাম চালু করা হলে ডেটাটাইপ অনুযায়ী সেই ভ্যারিয়েবলের জন্য মেমরিতে জায়গা দখল করবে প্রোগ্রাম। যেমনঃ যদি পূর্ণসংখ্যা ডাটা নিয়ে কাজ করতে চাই তাহলে int ডাটাটাইপ দিয়ে ভ্যারিয়েবল ঘোষনা করতে হবে, যা মেমোরিতে ৪ বাইট যায়গা দখল করবে।</p>
-                  <p class="">নিচে প্রথম লাইনে age নামে একটি variable ঘোষান করা হয়েছে এবং দ্বিতীয় লাইনে সেই ভেরিয়েবলে 17 ডেটাটি রাখা হয়েছেঃ</p>
-                  <p class="">int age;<br>age = 17;</p>
-                  <p class="">আবার ভগ্নাংশ ডাটা নিয়ে কাজ করতে চাইলে float অথবা double ডাটাটাইপ ব্যবহার করতে হবে। যেমনঃ</p>
-                  <p class="">float var_float; <br> var_float = 22.564;</p>
-                  <p class="">আর ক্যারেক্টার টাইপ ডাটা নিয়ে কাজ করলে char ডাটাটাইপ ব্যবহার করতে হবে। ক্যারেক্টার ভেরিয়েবল সংরক্ষণ করতে হলে একক কোটেশন (') ব্যবহার করতে হবে। যেমনঃ নিচের উদাহরণে ch একটি character টাইপ ভেরিয়েবল, যেখানে A ক্যারেক্টারে ডেটাটি রাখা হয়েছে।</p>
-                  <p class="">char ch; <br> ch = 'A';</p>
-                  <p class="">ভেরিয়েবল ঘোষনা করার সময় একই সাথে ডেটাও রাখা যায়। যেমনঃ</p>
-                  <p class="">char age = 17;</p>
-                  <p class=""><b>নোট : সি ভাষায় প্রতিটি statement এর পর একটি সেমি-কোলন (;) দিতে হয়। Statement বলতে কোনো কাজ করা বুঝায়। যেমনঃ উপরের ভেরিয়েবল ঘোষনা করা এবং ভেরিয়েবলে মান রাখা প্রতিটিই এক একটি statement, তাই প্রতিটির শেষে একটি করে সেমি-কোলন দেয়া হয়েছে।</b></p>
-              </div>
+            <div class="topic-parts">
+              <p class="question text-light-primary">ভ্যারিয়েবল কি? ও কিভাবে ভ্যারিয়েবল ঘোষনা করা হয়?</p><hr>
+              <p>Variable মানে চলক। যার মান পরিবতর্ন হয় তাকেই চলক বা ভেরিয়েবল বলে। <br><br>সি ভাষায় ডেটা নিয়ে কাজ করার জন্য ভ্যারিয়েবল ব্যবহার করতে হয়। ডেটা গুলোকে বিভিন্ন ভ্যারিয়েবল এ সংরক্ষন করে কাজ করতে হয়।<br><br>ভ্যারিয়েবল ঘোষনা বা ডিক্লারেশন এর জন্য ডাটাটাইপ প্রয়োজন। আমাদের কাজের জন্য যে টাইপ এর ডেটা দরকার সেই ডেটাটাইপ লিখে এর সাথে যেকোনো নাম দিলেই ভ্যারিয়েবল ডিক্লারেশন হয়ে যাবে এবং প্রোগ্রাম চালু করা হলে ডেটাটাইপ অনুযায়ী সেই ভ্যারিয়েবলের জন্য মেমরিতে জায়গা দখল করবে প্রোগ্রাম। যেমনঃ যদি পূর্ণসংখ্যা ডাটা নিয়ে কাজ করতে চাই তাহলে int ডাটাটাইপ দিয়ে ভ্যারিয়েবল ঘোষনা করতে হবে, যা মেমোরিতে ৪ বাইট যায়গা দখল করবে।<br><br>নিচে প্রথম লাইনে age নামে একটি variable ঘোষান করা হয়েছে এবং দ্বিতীয় লাইনে সেই ভেরিয়েবলে 17 ডেটাটি রাখা হয়েছেঃ</p>
+            </div>
+            <div class="topic-parts-code">
+              <h1>int age;<br>age = 17;</h1>
+            </div>
+            <div class="topic-parts">
+              <p>আবার ভগ্নাংশ ডাটা নিয়ে কাজ করতে চাইলে float অথবা double ডাটাটাইপ ব্যবহার করতে হবে। যেমনঃ</p>
+            </div>
+            <div class="topic-parts-code">
+              <h1>float var_float; <br> var_float = 22.564;</h1>
+            </div>
+            <div class="topic-parts">
+              <p>আর ক্যারেক্টার টাইপ ডাটা নিয়ে কাজ করলে char ডাটাটাইপ ব্যবহার করতে হবে। ক্যারেক্টার ভেরিয়েবল সংরক্ষণ করতে হলে একক কোটেশন (') ব্যবহার করতে হবে। যেমনঃ নিচের উদাহরণে ch একটি character টাইপ ভেরিয়েবল, যেখানে A ক্যারেক্টারে ডেটাটি রাখা হয়েছে।</p>
+            </div>
+            <div class="topic-parts-code">
+              <h1>char ch; <br>ch = 'A';</h1>
+            </div>
+            <div class="topic-parts">
+              <p>ভেরিয়েবল ঘোষনা করার সময় একই সাথে ডেটাও রাখা যায়। যেমনঃ</p>
+            </div>
+            <div class="topic-parts-code">
+              <h1>char age = 17;</h1>
+            </div>
+            <div class="topic-parts-imp">
+              <p class="">নোট : সি ভাষায় প্রতিটি statement এর পর একটি সেমি-কোলন (;) দিতে হয়। Statement বলতে কোনো কাজ করা বুঝায়। যেমনঃ উপরের ভেরিয়েবল ঘোষনা করা এবং ভেরিয়েবলে মান রাখা প্রতিটিই এক একটি statement, তাই প্রতিটির শেষে একটি করে সেমি-কোলন দেয়া হয়েছে।</p>
+            </div>
               <div class="topic-arrow-buttons">
                   <div class="topic-back">
                     <button>

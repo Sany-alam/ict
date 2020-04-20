@@ -6,15 +6,15 @@
 
     <!-- required css files -->
     <!-- bootstrap css files -->
-    <link rel="stylesheet" href="../../assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="../../assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- required javascripts -->
-    <script src="../../assets/js/vendors.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="{{ asset('assets/js/vendors.min.js') }}"></script> 
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <title>Document</title>
 </head>
@@ -61,28 +61,58 @@
             <!-- back button -->
             <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
             <!-- box title -->
-            <a href="#">5.7.3 Topic - do while লুপ</a>
+            <a href="#">৫.৭.৩ - do while লুপ</a>
           </div>
           <!-- box body -->
           <div class="page-body">
-              <div class="topic-parts">
-                  <p class="question text-light-primary">do while লুপ কি? কিভাবে?</p>
-                  <p class="">while এবং for লুপ এর মত do while ও একি কাজ করে। কিন্তু do while এর কাজের ধরন টা একটু ভিন্ন। do while লেখার নিয়মঃ <br> // initialize <br>
-                    do <br>
-                    { <br>
-                        // statement <br>
-                        // increment/decrement <br>
-                    } while(condition); <br> অন্য লুপ গুলোর থেকে এর বিশেষত্য হল এ লুপের কৌনিক ব্রাকেটের ভিতরের কাজ গুলো কমপক্ষে একবার হবে, তারপর condition পরীক্ষা করবে। condition সত্য হলে লুপ চলতে থাকবে, না হয় বন্ধ হয়ে যাবে। অর্থাৎ condition সত্য হোক আর মিথ্যা হোক লুপ এর ভিতরের কাজ একবার চলবেই।</p>
-                  <p class=""><b>উদাহরণঃ</b> <br> int i, sum = 0; <br>
-                    i = 1; <br>
-                    do <br>
-                    { <br>
-                        sum = sum + i; <br>
-                        i++; <br>
-                    } while(i <= 10); <br> printf("Summation of 1 to 10: %d", sum); <br>
-                    <b>ফলাফলঃ</b> Summation of 1 to 10: 55 <br></p>
-                  <p class=""># উদাহরণ এ intialize এ i=1 করার পর লুপ এর ব্র্যাকেট এর ভিতর ডুকে যোগ এর কাজ করে তারপর i++(increment) করবে। <br># এরপর while এর ভিতর i <= 10 (condition) চেক করবে। condition সত্য হলে আবার ব্র্যাকেট এর ভিতর ডুকবে। <br> # যেমন যখন i = 1 তখন sum এর সাথে 1 যোগ করবে, এরপর i++ এ 1 বাড়াবে এবং i <=10 সত্য হলে আবার i=2 হবে sum এর সাথে 2 যোগ করবে। এরপর আবার i++ এ 1 বাড়িয়ে i<=10 চেক করবে। <br># do while লুপ এ কৌনিক ব্রাকেটের কাজ প্রথমবার করার আগে condition চেক করে না কিন্তু while এবং for লুপে প্রথম স্টেপ থেকেই condition চেক করে। অর্থাৎ do while লুপ এর condition মিথ্যা হলেও এর ভিতরের কাজ একবার চলবে।</p>
-              </div>
+
+          <div class="topic-parts-imp">
+                  <p class="question text-light-primary">do while লুপ কি? কিভাবে?</p><hr>
+                  <p class="">while এবং for লুপ এর মত do while ও একি কাজ করে। কিন্তু do while এর কাজের ধরন টা একটু ভিন্ন। do while লেখার নিয়মঃ</p>
+                  </div>
+                  
+                  <div class="topic-parts-code">
+                  <h1>
+                  do<br>
+                  {</h1>
+                  <h2>&nbsp;&nbsp;&nbsp;// statements<br>
+                  &nbsp;&nbsp;&nbsp;// increment/decrement</h2>
+                  <h1>}&nbsp; while(condition);</h1>
+                  </div>
+
+                  <div class="topic-parts">
+                  <p>অন্য লুপ গুলোর থেকে এর বিশেষত্য হল এ লুপের কৌনিক ব্রাকেটের ভিতরের কাজ গুলো কমপক্ষে একবার হবে, তারপর condition পরীক্ষা করবে। condition সত্য হলে লুপ চলতে থাকবে, না হয় বন্ধ হয়ে যাবে। অর্থাৎ condition সত্য হোক আর মিথ্যা হোক লুপ এর ভিতরের কাজ একবার চলবেই।<b>উদাহরনঃ</b></p>
+                  </div>
+                  
+                  <div class="topic-parts-code">
+                  <h1>int i, sum = 0;<br>
+                  i = 1; <span>// initialize</span>
+                  <br><br>
+                  do<br>
+                  {<br>
+                  &nbsp;&nbsp;&nbsp;sum = sum + i ;<br>
+                  &nbsp;&nbsp;&nbsp;i++;<br>
+                  }&nbsp; while(i <= 10);<br><br>
+                  printf(" Summation of 1 to 10: %d", sum ) ;</h1>
+                  </div>
+                  
+                  <div class="topic-parts-code-ans">
+                    <p>ফলাফল :<br>
+                    Summation of 1 to 10: 55
+                    </p>
+                 </div>
+
+                 <div class="topic-parts">
+                  <p class="">উদাহরণ এ intialize এ i=1 করার পর লুপ এর ব্র্যাকেট এর ভিতর ডুকে যোগ এর কাজ করে তারপর i++(increment) করবে।<br>
+                  এরপর while এর ভিতর i <= 10 (condition) চেক করবে। condition সত্য হলে আবার ব্র্যাকেট এর ভিতর ডুকবে। <br>
+                  যেমন যখন i = 1 তখন sum এর সাথে 1 যোগ করবে, এরপর i++ এ 1 বাড়াবে এবং i <=10 সত্য হলে আবার i=2 হবে sum এর সাথে 2 যোগ করবে। এরপর আবার i++ এ 1 বাড়িয়ে i<=10 চেক করবে।</p>
+                 </div>
+
+                 <div class="topic-parts-imp">
+                  <p>do while লুপ এ কৌনিক ব্রাকেটের কাজ প্রথমবার করার আগে condition চেক করে না কিন্তু while এবং for লুপে প্রথম স্টেপ থেকেই condition চেক করে। অর্থাৎ do while লুপ এর condition মিথ্যা হলেও এর ভিতরের কাজ একবার চলবে।</p>
+                 </div>
+
+
               <div class="topic-arrow-buttons">
                   <div class="topic-back">
                     <button>

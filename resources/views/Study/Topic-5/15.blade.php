@@ -6,15 +6,15 @@
 
     <!-- required css files -->
     <!-- bootstrap css files -->
-    <link rel="stylesheet" href="../../assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="../../assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- required javascripts -->
-    <script src="../../assets/js/vendors.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="{{ asset('assets/js/vendors.min.js') }}"></script> 
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <title>Document</title>
 </head>
@@ -61,30 +61,54 @@
             <!-- back button -->
             <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
             <!-- box title -->
-            <a href="#">5.7.2 Topic - while লুপ!</a>
+            <a href="#">৫.৭.২ - while লুপ!</a>
           </div>
           <!-- box body -->
           <div class="page-body">
-              <div class="topic-parts">
-                  <p class="question text-light-primary">while লুপ কি? কিভাবে?</p>
-                  <p class="">while লুপ এর কাজ for লুপ এর মত। শুধু লেখার ধরণটি ভিন্ন। while লেখার নিয়মঃ <br> while(condition) <br>
-                    { <br>
-                        // statement <br>
-                        // increment/decrement <br>
-                    } <br> এখানে condition যতক্ষন সত্য থাকবে ততক্ষন কৌনিক ব্রাকেটের কাজ গুলো চলবে।</p>
-                  <p class=""><b>উদাহরণঃ</b> <br> int i, sum = 0; <br>
-                    i = 10; // initialize <br>
-                    while(i >= 1) <br>
-                    { <br>
-                        sum = sum + i; // statement <br>
-                        i--; // increment <br>
-                    } <br> printf("Summation of 1 to 10: %d", sum); <br>
-                    ফলাফলঃSummation of 1 to 10: 55</p>
-                  <p class="">উদাহরণ এ প্রোগ্রামটিতে ১ থেকে ১০ সংখ্যা গুলোর যোগফল while লুপ এর মাধ্যমে বের করা হয়েছে। এবার উলটা দিক থেকে করা হয়েছে।</p>
-                  <p class=""># এখানে initialize হল "i = 10" যা 10 থেকে শুরু করা হয়েছে নির্দেশ করে।</p>
-                  <p class=""># এরপর condition চেক করে দেখবে। condition হল "i >= 1"। যদি condition অনুযায়ী সত্য হয় এরপর ব্র্যকেটের ভিতরের কাজ করবে। এরপর যাবে increment/decrement অংশে।</p>
-                  <p class=""># এখানে decrement করা হয়েছে "i--"। "--" এর ব্যবহার "অপারেটর" অংশে দেখানো হয়েছে। decrement অংশে i-- অর্থাৎ i এর মান ১ কমিয়ে আবার condition চেক করবে। তখন এর মান i=9 নিয়ে condition চেক করবে। i>=1 সত্য হলে আবার ব্রাকেট এর ভিতরের কাজ করবে। এরপর আবার increment/decrement অংশে যাবে। এভাবে condition মিথ্যা না হওয়া পর্যন্ত চলতে থাকবে। condition মিথ্যা হলে কাজ শেষ হয়ে যাবে। উপরের উদাহরণ এর ক্ষেত্রে i এর মান ১ পর্যন্ত কাজ করবে এরপর i >= 1 মিথ্যা হবে এবং লুপ এর কাজ শেষ হবে।</p>
-              </div>
+
+              <div class="topic-parts-imp">
+                  <p class="question text-light-primary">while লুপ কি? কিভাবে?</p><hr>
+                  <p class="">while লুপ এর কাজ for লুপ এর মত। শুধু লেখার ধরণটি ভিন্ন। while লেখার নিয়মঃ</p>
+                  </div>
+                  
+                  <div class="topic-parts-code">
+                  <h1>
+                  while( condition )<br>
+                  {</h1>
+                  <h2>&nbsp;&nbsp;&nbsp;// statements<br>
+                  &nbsp;&nbsp;&nbsp;// increment/decrement</h2>
+                  <h1>}</h1>
+                  </div>
+
+                  <div class="topic-parts">
+                  <p>এখানে condition যতক্ষন সত্য থাকবে ততক্ষন কৌনিক ব্রাকেটের কাজ গুলো চলবে।<b>উদাহরনঃ</b></p>
+                  </div>
+                  
+                  <div class="topic-parts-code">
+                  <h1>int i, sum = 0;<br>
+                  i = 10; <span>// initialize</span>
+                  <br><br>
+                  while(i >= 1)<br>
+                  {<br>
+                  &nbsp;&nbsp;&nbsp;sum = sum + i ; <span>// statement</span><br>
+                  &nbsp;&nbsp;&nbsp;i--; <span>// increment</span><br>
+                  }<br><br>
+                  printf(" Summation of 1 to 10: %d", sum ) ;</h1>
+                  </div>
+                  
+                  <div class="topic-parts-code-ans">
+                    <p>ফলাফল :<br>
+                    Summation of 1 to 10: 55
+                    </p>
+                 </div>
+
+                 <div class="topic-parts">
+                  <p class="">উদাহরণ এ প্রোগ্রামটিতে ১ থেকে ১০ সংখ্যা গুলোর যোগফল while লুপ এর মাধ্যমে বের করা হয়েছে। এবার উলটা দিক থেকে করা হয়েছে।<br>
+                  এখানে initialize হল "i = 10" যা 10 থেকে শুরু করা হয়েছে নির্দেশ করে।<br>
+                  এরপর condition চেক করে দেখবে। condition হল "i >= 1"। যদি condition অনুযায়ী সত্য হয় এরপর ব্র্যকেটের ভিতরের কাজ করবে। এরপর যাবে increment/decrement অংশে।<br>
+                  এখানে decrement করা হয়েছে "i--"। "--" এর ব্যবহার "অপারেটর" অংশে দেখানো হয়েছে। decrement অংশে i-- অর্থাৎ i এর মান ১ কমিয়ে আবার condition চেক করবে। তখন এর মান i=9 নিয়ে condition চেক করবে। i>=1 সত্য হলে আবার ব্রাকেট এর ভিতরের কাজ করবে। এরপর আবার increment/decrement অংশে যাবে। এভাবে condition মিথ্যা না হওয়া পর্যন্ত চলতে থাকবে। condition মিথ্যা হলে কাজ শেষ হয়ে যাবে। উপরের উদাহরণ এর ক্ষেত্রে i এর মান ১ পর্যন্ত কাজ করবে এরপর i >= 1 মিথ্যা হবে এবং লুপ এর কাজ শেষ হবে।</p>
+                 </div>
+
               <div class="topic-arrow-buttons">
                   <div class="topic-back">
                     <button>

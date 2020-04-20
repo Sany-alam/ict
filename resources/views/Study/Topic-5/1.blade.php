@@ -6,15 +6,15 @@
 
     <!-- required css files -->
     <!-- bootstrap css files -->
-    <link rel="stylesheet" href="../../assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="../../assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- required javascripts -->
-    <script src="../../assets/js/vendors.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="{{ asset('assets/js/vendors.min.js') }}"></script> 
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <title>Document</title>
 </head>
@@ -61,20 +61,23 @@
             <!-- back button -->
             <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
             <!-- box title -->
-            <a href="#">5.0 Topic - সি ভাষা ও এর জনক</a>
+            <a href="#">৫. সি ভাষা ও এর জনক</a>
           </div>
           <!-- box body -->
           <div class="page-body">
-              <div class="topic-parts">
+              <div class="topic-parts-imp">
                   <!-- <p class="question text-light-primary">Question is here?</p> -->
-                  <p class="">সি প্রোগ্রামিং ভাষা একটি স্ট্রাকচারাল প্রোগ্রামিং ভাষা। সি ভাষার জনক হলেন ডেনিস রিচি (Dennis Ritchie)। তিনি ১৯৬৯ থেকে ১৯৭৩ সাল পর্যন্ত বেল ল্যাবরেটরি তে সি ভাষা ডেভলাপ এর কাজ করেন। ১৯৭২ সালে প্রথম সি ভাষা চালনা করা হয়। এরপর ধীরে ধীরে সি এর জনপ্রিয়তা বাড়তে থাকে। ১৯৮৩ সালে সি এর আদর্শ ভার্সন তৈরি করার জন্য একটি কমিটি করা হয় এবং তারা ৬ বছর পর ১৯৮৯ সালে আদর্শ সি ভার্সন তৈরি করেন, যা আনসি (ANSI C) নামে পরিচিত</p>
-              </div>
-              <div class="topic-arrow-buttons">
-                  <div class="topic-back">
-                    <button>
-                        <i class="fa fa-arrow-left"></i>
-                    </button>
+                  <p class="">সি প্রোগ্রামিং ভাষা একটি স্ট্রাকচারাল প্রোগ্রামিং ভাষা। সি ভাষার জনক হলেন ডেনিস রিচি (Dennis Ritchie)। তিনি ১৯৬৯ থেকে ১৯৭৩ সাল পর্যন্ত বেল ল্যাবরেটরি তে সি ভাষা ডেভলাপ এর কাজ করেন। ১৯৭২ সালে প্রথম সি ভাষা চালনা করা হয়। </p>
                   </div>
+                  <div class="">
+                  <img class="col-sm-12 col-md-4 responsive" style="display: block; margin-left: auto; margin-right: auto; padding-bottom: 20px;" src="{{ asset('assets') }}/images/chapter/chap5/img1.jpg" alt="">
+                  </div>
+                  <div class="topic-parts-imp">
+                  <p>এরপর ধীরে ধীরে সি এর জনপ্রিয়তা বাড়তে থাকে। ১৯৮৩ সালে সি এর আদর্শ ভার্সন তৈরি করার জন্য একটি কমিটি করা হয় এবং তারা ৬ বছর পর ১৯৮৯ সালে আদর্শ সি ভার্সন তৈরি করেন, যা আনসি (ANSI C) নামে পরিচিত</p>
+              </div>
+             
+              <div class="topic-arrow-buttons">
+                  
                   <div class="topic-next">
                     <button>
                         <i class="fa fa-arrow-right"></i>
