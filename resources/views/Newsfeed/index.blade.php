@@ -1,5 +1,9 @@
 @extends('app')
 @section('title','Newsfeet')
+@section('page-css')
+    <!-- search question selects css -->
+    <link href="{{ asset('assets/vendors/select2/select2.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <!-- box title bar-->
 <div class="page-title">
@@ -24,12 +28,12 @@
     <div class="writepost-textarea">
         <input placeholder="Your text hare" type="text" class="form-control">
         <ul class="writepost-icons">
-        <li class="writepost-icon">
+        {{-- <li class="writepost-icon">
             <input type="file" id="attach">
             <label for="attach">
             <i class="fa fa-paperclip"></i>
             </label>
-        </li>
+        </li> --}}
         <li class="writepost-icon">
             <input type="file" id="image">
             <label for="image">
@@ -37,14 +41,21 @@
             </label>
             </a>
         </li>
-        <li class="writepost-icon">
+        {{-- <li class="writepost-icon">
             <a href="#">
             <i class="fa fa-smile"></i>
             </a>
-        </li>
+        </li> --}}
         </ul>
     </div>
-    <div class="text-right">
+    <div class="d-flex justify-content-between">
+        <select class="select2" id="keyword">
+            <option value="">Select keyword</option>
+            <option value="option 1">option 1</option>
+            <option value="option 1">option 1</option>
+            <option value="option 1">option 1</option>
+            <option value="option 1">option 1</option>
+        </select>
         <button class="newsfeed-buttons">Post</button>
     </div>
     </div>
@@ -71,7 +82,7 @@
     </div>
     <div class="post-content">
         <p>This is question about ICT? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed id tenetur nulla sit dolore accusantium fuga provident nostrum ratione. Porro reiciendis numquam id nihil doloremque corporis culpa tempora ipsam cumque?</p>
-        <img class="img-fluid" src="assets/images/icons/prev qstn.png" alt="">
+        <img class="img-fluid" src="assets/images/icons/boardquestion.png" alt="">
     </div>
     <div class="post-write-comment">
         <div class="postcomment-textarea">
@@ -112,7 +123,7 @@
         </div>
         </div>
         <div class="comment-content">
-        <img class="img-fluid" src="assets/images/icons/prev qstn.png" alt="">
+        <img class="img-fluid" src="assets/images/icons/boardquestion.png" alt="">
         <p>This is question about ICT? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed id tenetur nulla sit dolore accusantium fuga provident nostrum ratione. Porro reiciendis numquam id nihil doloremque corporis culpa tempora ipsam cumque?</p>
         </div>
         <div class="comment-action">
@@ -192,7 +203,7 @@
         </div>
         </div>
         <div class="comment-content">
-        <img class="img-fluid" src="assets/images/icons/prev qstn.png" alt="">
+        <img class="img-fluid" src="assets/images/icons/boardquestion.png" alt="">
         <!-- without text comment (p tag removed) -->
         </div>
         <div class="comment-action">
@@ -289,5 +300,13 @@
     </div>
     </div>
 </div>
-          
+
+@endsection
+@section('page-js')
+    {{-- board question page --}}
+    <script src="{{ asset('assets/vendors/select2/select2.min.js') }}"></script>
+@endsection
+@section('page-custom-js')
+    {{-- custom page js --}}
+    <script src="{{ asset('assets\js\custom\newsfeed.js') }}"></script>
 @endsection
