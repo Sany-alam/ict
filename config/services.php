@@ -29,5 +29,14 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'firebase' => [
+        'api_key' => 'AIzaSyAGyicAsW0f_BijtXA_ea_yE9vutg_ZOaE',
+        'auth_domain' => 'fff-bd.firebaseapp.com',
+        'database_url' => 'https://fff-bd.firebaseio.com/',
+        'projectId'=>"fff-bd",
+        'storageBucket'=> "fff-bd.appspot.com",
+        'messagingSenderId'=> "558959479376",
+        'appId'=> "1:558959479376:web:5a66426bab9592d68edf55"
+    ],
 
 ];

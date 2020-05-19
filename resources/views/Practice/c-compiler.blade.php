@@ -30,5 +30,7 @@ void main()
 @endsection
 @section('page-custom-js')
 <script src="{{ asset('assets') }}/js/custom/ccompiler.js?{{ time() }}"></script>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 @endsection
 
