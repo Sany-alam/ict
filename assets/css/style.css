@@ -107,6 +107,24 @@ body{
 
 }
 
+.page-body2{
+    background-color: white;
+    padding: 15px 15px;
+    /* overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 387px; */
+
+}
+
+.page-body-logic{
+    background-color: #ffffff;
+    padding: 15px 15px;
+    /* overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 387px; */
+
+}
+
 p{
     color:#000000!important;
 }
@@ -225,18 +243,184 @@ a.chapter-button.active{
     float: right;
 }
 
-.topic-arrow-buttons button{
+.topic-arrow-buttons a{
+    /* background-color: green;
+    color: honeydew;
+    border: none;
+    outline: none!important; */
+    font-size: 20px;
     background-color: green;
     color: honeydew;
     border: none;
     outline: none!important;
+    padding: 0px 10px;
 }
 
-.topic-arrow-buttons button:hover{
+.topic-arrow-buttons a:hover{
     background-color: honeydew;
     color: green;
 }
 
+.topic-parts-question{
+    border: 1px solid #e2e2e2;
+    padding: 15px;
+    text-align: justify;
+    margin: 0px 0px 10px 0px;
+    border-left: 5px solid #F44336;
+}
+
+.topic-parts-imp{
+    border: 1px solid #e2e2e2;
+    padding: 15px;
+    text-align: justify;
+    margin: 0px 0px 10px 0px;
+    border-left: 5px solid #ffc107;
+}
+
+.topic-parts h1{
+    background-color: #4CAF50;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    padding: 11px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 27%;
+
+}
+
+.topic-parts ul{
+    margin: 19px;
+}
+
+.topic-parts table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+
+.topic-parts  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+.topic-parts tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .topic-parts span{
+      text-decoration: overline;
+  }
+  .topic-parts-imp span{
+    text-decoration: double overline;
+}
+
+.topic-parts-code{
+    border: 1px solid #e2e2e2;
+    padding: 15px;
+    text-align: justify;
+    margin: 0px 0px 10px 0px;
+    background-color: #3f87f50a;
+    border-left: 5px solid #72849a66;
+
+}
+
+.topic-parts-code-ans{
+    border: 1px solid #e2e2e2;
+    padding: 15px;
+    text-align: justify;
+    margin: 0px 0px 10px 0px;
+    background-color: darkslategray;
+}
+
+.topic-parts-code-ans p{
+    color: white!important;
+}
+
+.topic-parts-code-ans ul{
+    margin: 19px;
+}
+.topic-parts-code-ans li{
+    color: white!important;
+}
+
+.topic-parts-code-ans dl{
+    margin: 19px;
+}
+.topic-parts-code-ans dt{
+    color: white!important;
+}
+.topic-parts-code-ans dd{
+    color: white!important;
+}
+.topic-parts-code-ans table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+
+.topic-parts-code-ans  td, th {
+    border:none;
+    text-align: left;
+    padding: 8px;
+  }
+
+.topic-parts-code h1{
+    font-family: "Lucida Console", Courier, monospace!important;
+    color: #6c757d!important;
+    margin-left: 20px;
+    font-size: inherit;
+    font-weight: 400!important;
+}
+
+.topic-parts-code h2{
+    color: #979ca2!important;
+    margin-left: 20px;
+    font-size: inherit;
+    font-weight: 400!important;
+}
+
+.topic-parts-code span{
+    color: #979ca2!important;
+    margin-left: 20px;
+    font-size: inherit;
+    font-weight: 400!important;
+}
+
+.topic-solve-parts{
+    border: 1px solid #e2e2e2;
+    padding: 10px;
+    text-align: center;
+    background-color: darkslategray;
+}
+.topic-solve-parts button{
+    color: #343a40;
+    font-weight: 800;
+    border: none;
+    border-radius: 3px;
+  background-color: white;
+  padding: 8px 38px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* On mouse-over */
+.topic-solve-parts button:hover {
+    background: #dee2e6;
+}
+
+
+/* topic page css ends here */
+
+.pre
+.pre span{
+    font-family: SourceCodePro, monospace !important;
+  }
+
+/* question/test/prev-que page css start here */
 /* topic page css ends here */
 
 
@@ -277,7 +461,9 @@ button.mytimelne-button:hover{
 }
 
 .writepost-textarea input{
-    padding: 5px 0px 30px 10px;
+    /* padding: 5px 0px 30px 10px;
+    margin-bottom: 10px; */
+    padding: 15px 40px 40px 15px;
     margin-bottom: 10px;
 }
 
@@ -596,4 +782,99 @@ button.comment-report-button:hover{
     .page-content{
         margin-top: 115px;
     }
+  }
+
+
+  .desc-bottom {
+    margin: 0;
+    padding: 10px;
+    overflow: auto;
+  }
+
+.desc-bottom {
+    border-top: 3px solid #607d8b;
+  }
+
+  /*
+On/Off flip switch
+*/
+
+.onoffswitch {
+    position: relative;
+    width: 90px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .onoffswitch-checkbox {
+    display: none;
+  }
+
+  .onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #ECEFF1;
+    border-radius: 20px;
+  }
+
+  .onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+  }
+
+  .onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+    font-family: SourceCodePro;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .onoffswitch-inner:before {
+    content: "1";
+    padding-left: 30px;
+    background-color: #689f38;
+    color: #FFFFFF;
+  }
+
+  .onoffswitch-inner:after {
+    content: "0";
+    padding-right: 30px;
+    background-color: #FF5252;
+    color: #FFFFFF;
+    text-align: right;
+  }
+
+  .onoffswitch-switch {
+    display: block;
+    width: 18px;
+    margin: 6px;
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 56px;
+    border: 2px solid #ECEFF1;
+    border-radius: 20px;
+    -webkit-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
+  }
+
+  .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+  }
+
+  .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+    right: 0px;
   }

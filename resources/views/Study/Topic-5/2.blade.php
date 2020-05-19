@@ -6,15 +6,15 @@
 
     <!-- required css files -->
     <!-- bootstrap css files -->
-    <link rel="stylesheet" href="../../assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="../../assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- required javascripts -->
-    <script src="../../assets/js/vendors.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="{{ asset('assets/js/vendors.min.js') }}"></script> 
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <title>Document</title>
 </head>
@@ -61,53 +61,47 @@
             <!-- back button -->
             <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
             <!-- box title -->
-            <a href="#">5.1 Topic - সূচনা</a>
+            <a href="#">৫.১ সূচনা</a>
           </div>
           <!-- box body -->
           <div class="page-body">
               <div class="topic-parts">
                   <!-- <p class="question text-light-primary">Question is here?</p> -->
                   <p class="">প্রোগ্রামিং অর্থ হচ্ছে কম্পিউটারকে কোন একটা কাজ কিভাবে করতে হবে তা বলে দেয়া। নিচে সি ভাষার প্রোগ্রামের বিভিন্ন অংশের পরিচয় দেওয়া হল। প্রতিটি অংশের বিস্তারিত বর্ণনা পরবর্তী অধ্যায় গুলোতে দেওয়া হয়েছে।</p>
-                  <p class="">#include< stdio.h><br>
-<br>
-                    // এটি একটি মন্তব্য<br>
-                    <br>
-                    /*<br>
-                    এটি একটি দুই<br>
-                    লাইন মন্তব্য<br>
-                    */<br>
-                    <br>
-                    int main()<br>
-                    {<br>
-                        // সব কোড এখানে লিখতে হবে।<br>
-                    <br>
-                        return 0;<br>
-                    }</p>
-                  <p class="">সি ভাষায় লেখা যে কোনো প্রোগ্রামে উপরের অংশ গুলো লিখতে হয়। এখানে "//" দিয়ে এবং "/* ... /" দিয়ে লিখা অংশ গুলো হল মন্তব্য, যা আসলে মূল প্রোগ্রামের কিছু না। এগুলো ব্যবহার করা হয় প্রোগ্রামের বিভিন্ন অংশের বণর্না লিখতে বা মন্তব্য দিতে। এক লাইনের মন্তব্য লিখতে "//" এবং একাধিক লাইনের মন্তব্য লিখতে "/ ... */" ব্যবহার করা হয়।
+                  </div>
+                  <div>
 
-                    1 নং লাইনের কোড দিয়ে stdio.h নামে একটি ফাইল আমাদের প্রোগ্রামে যুক্ত (include) করা হয়েছে। এ ফাইল গুলোকে হেডার ফাইল বলা হয়, তাই এদের extension হচ্ছে ".h"। যেখানে কিছু রেডি করা ফাংশন আছে, যেগুলো ব্যবহার করে আমরা সি প্রোগ্রামে ইনপুট-আউটপুট দেয়া-নেয়া করতে পারব।
-                    
-                    stdio = standard input output
-                    10 নং লাইনে int main() হল সি প্রোগ্রামের প্রধান ফাংশন, সি প্রোগ্রাম চালু হলে এ ফাংশনের ভিতরের কোড গুলো আগে চালু (execute) হয়। int main() এর পরেই দ্বিতীয় বন্ধনী "{ ... }" এর ভিতরে এ ফাংশনের কাজ গুলো লিখতে হয়।
-                    
-                    14 নং লাইনের return 0; অবশ্যই লিখতে হবে।
-                    
-                    উপরের প্রতিটি অংশের বিস্তারিত বণর্না পাওয়া যাবে সামনের অধ্যয় গুলোতে।
-                    
-                    নিচে একটি উদাহরণ প্রোগ্রাম দেখানো হল। যার কাজ হবে "Hello Bangladesh!" আউটপুট দেয়া।</p>
-                  <p class="">#include<stdio.h>
-<br>
-                    int main()<br>
-                    {<br>
-                        printf("Hello Bangladesh!");<br>
+                  <div class="topic-parts-code">
+                    <h1>#include&lt;stdio.h&gt;</h1>
+                    <h2>// এটি একটি মন্তব্য<br><br>/*<br>
+                    এটি একটি দুই<br>লাইন মন্তব্য<br>*/<br><br></h2>
+                    <h1>int main()<br>{<br></h1>
+                    <h2>&nbsp;&nbsp;&nbsp;// সব কোড এখানে লিখতে হবে।</h2><br>
+                    <h1>&nbsp;&nbsp;&nbsp;return 0;<br>}</h1>
+                  </div>
+
+                  <div class="topic-parts">
+                    <p class="">সি ভাষায় লেখা যে কোনো প্রোগ্রামে উপরের অংশ গুলো লিখতে হয়। এখানে "//" দিয়ে এবং "/* ... /" দিয়ে লিখা অংশ গুলো হল মন্তব্য, যা আসলে মূল প্রোগ্রামের কিছু না। এগুলো ব্যবহার করা হয় প্রোগ্রামের বিভিন্ন অংশের বণর্না লিখতে বা মন্তব্য দিতে। এক লাইনের মন্তব্য লিখতে "//" এবং একাধিক লাইনের মন্তব্য লিখতে "/ ... */" ব্যবহার করা হয়।<br><br>1 নং লাইনের কোড দিয়ে stdio.h নামে একটি ফাইল আমাদের প্রোগ্রামে যুক্ত (include) করা হয়েছে। এ ফাইল গুলোকে হেডার ফাইল বলা হয়, তাই এদের extension হচ্ছে ".h"। যেখানে কিছু রেডি করা ফাংশন আছে, যেগুলো ব্যবহার করে আমরা সি প্রোগ্রামে ইনপুট-আউটপুট দেয়া-নেয়া করতে পারব।</p>
+                    <p style="text-align:center; font-size:x-large;">stdio = <b>st</b>andar<b>d i</b>nput <b>o</b>utput</p>
+                    <p>int main() হল সি প্রোগ্রামের প্রধান ফাংশন, সি প্রোগ্রাম চালু হলে এ ফাংশনের ভিতরের কোড গুলো আগে চালু (execute) হয়। int main() এর পরেই দ্বিতীয় বন্ধনী "{ ... }" এর ভিতরে এ ফাংশনের কাজ গুলো লিখতে হয়।</p>
+                    <p>return 0; অবশ্যই লিখতে হবে।<br>উপরের প্রতিটি অংশের বিস্তারিত বণর্না পাওয়া যাবে সামনের অধ্যয় গুলোতে।<br>নিচে একটি উদাহরণ প্রোগ্রাম দেখানো হল। যার কাজ হবে "Hello Bangladesh!" আউটপুট দেয়া।</p>
+                  </div>
+
+                  <div class="topic-parts-code">
+                    <h1>#include&lt;stdio.h&gt;</h1>
                     <br>
-                        return 0;<br>
-                    }</p>
-                  <p class="">ফলাফল : Hello Bangladesh!<br>
-                    উপরের প্রোগ্রামটি execute করলে অর্থাৎ চালু করলে ফলাফল অংশের লেখাটি দেখাবে।
-                    
-                    এখানে printf() একটি আউটপুট ফাংশন, যা stdio.h হেডার ফাইলে আছে। সামনের অধ্যয়ে এ নিয়ে বিস্তারিত পাওয়া যাবে।</p>
-              </div>
+                    <h1>int main()<br>{<br></h1>
+                    <h1>&nbsp;&nbsp;&nbsp;printf("Hello Bangladesh!");<br></h1>
+                    <h1>&nbsp;&nbsp;&nbsp;return 0;<br>}</h1>
+                  </div>
+
+                  <div class="topic-parts-code-ans">
+                    <p>ফলাফল : <br>Hello Bangladesh!</p>
+                 </div>
+                 <div class="topic-parts">
+                    উপরের প্রোগ্রামটি execute করলে অর্থাৎ চালু করলে <b>ফলাফল</b> অংশের লেখাটি দেখাবে।<br>এখানে printf() একটি আউটপুট ফাংশন, যা stdio.h হেডার ফাইলে আছে। সামনের অধ্যয়ে এ নিয়ে বিস্তারিত পাওয়া যাবে।</p>
+                 </div>
+
               <div class="topic-arrow-buttons">
                   <div class="topic-back">
                     <button>

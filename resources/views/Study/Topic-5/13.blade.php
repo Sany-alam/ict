@@ -6,15 +6,15 @@
 
     <!-- required css files -->
     <!-- bootstrap css files -->
-    <link rel="stylesheet" href="../../assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="../../assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- required javascripts -->
-    <script src="../../assets/js/vendors.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="{{ asset('assets/js/vendors.min.js') }}"></script> 
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <title>Document</title>
 </head>
@@ -61,7 +61,7 @@
             <!-- back button -->
             <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
             <!-- box title -->
-            <a href="#">5.7.0 Topic - লুপ!</a>
+            <a href="#">৫.৭ - লুপ!</a>
           </div>
           <!-- box body -->
           <div class="page-body">

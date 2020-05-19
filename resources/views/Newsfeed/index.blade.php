@@ -1,5 +1,9 @@
 @extends('app')
 @section('title','Newsfeet')
+@section('page-css')
+    <!-- search question selects css -->
+    <link href="{{ asset('assets/vendors/select2/select2.css') }}" rel="stylesheet">
+@endsection
 @section('content')
 <!-- box title bar-->
 <div class="page-title">
@@ -24,12 +28,12 @@
     <div class="writepost-textarea">
         <input placeholder="Your text hare"  type="text" class="form-control">
         <ul class="writepost-icons">
-        <li class="writepost-icon">
+        {{-- <li class="writepost-icon">
             <input type="file" id="attach">
             <label for="attach">
             <i class="fa fa-paperclip"></i>
             </label>
-        </li>
+        </li> --}}
         <li class="writepost-icon">
             <input type="file" id="image">
             <label for="image">
@@ -37,11 +41,11 @@
             </label>
             </a>
         </li>
-        <li class="writepost-icon">
+        {{-- <li class="writepost-icon">
             <a href="#">
             <i class="fa fa-smile"></i>
             </a>
-        </li>
+        </li> --}}
         </ul>
     </div>
     <div class="text-right">

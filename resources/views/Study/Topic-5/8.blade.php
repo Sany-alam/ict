@@ -6,15 +6,15 @@
 
     <!-- required css files -->
     <!-- bootstrap css files -->
-    <link rel="stylesheet" href="../../assets/css/app.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="../../assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/all.min.css') }}">
     <!-- Custom css -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
     <!-- required javascripts -->
-    <script src="../../assets/js/vendors.min.js"></script>
-    <script src="../../assets/js/app.min.js"></script>
+    <script src="{{ asset('assets/js/vendors.min.js') }}"></script> 
+    <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
     <title>Document</title>
 </head>
@@ -61,15 +61,19 @@
             <!-- back button -->
             <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
             <!-- box title -->
-            <a href="#">5.6 Topic - কন্ডিশনাল স্টেটমেন্ট</a>
+            <a href="#">৫.৬ - কন্ডিশনাল স্টেটমেন্ট</a>
           </div>
           <!-- box body -->
           <div class="page-body">
-              <div class="topic-parts">
-                  <p class="question text-light-primary">কন্ডিশনাল স্টেটমেন্ট কি জিনিস!</p>
-                  <p class="">condition - noun - অবস্থা, শর্ত</p>
+              <div class="topic-parts-imp">
+                  <p class="question text-light-primary">কন্ডিশনাল স্টেটমেন্ট কি জিনিস!</p><hr>
+                  <p style="font-size:large;"><b>condition</b><sub>(noun)</sub> - অবস্থা, শর্ত</p>
+                  </div>
+                  <div class="topic-parts">
                   <p class="">কন্ডিশনাল স্টেটমেন্ট, নামে কন্ডিশন দেখে মোটামুটি বুঝা যায় এটা কন্ডিশন এর উপর কাজ করে। এর কাজ হলো বিভিন্ন কন্ডিশন এর উপর ভর করে কাজ করা। সি ভাষায় কাজ করার সময় আমাদের বিভিন্ন কন্ডিশন এর মুখোমুখি হতে হবে। এসব কন্ডিশন গুলা পূরণ করলে বা না করলে কি কি করতে হবে এসব কন্ডিশনাল স্টেটমেন্ট এ বলে দেয়া হয়।</p>
                   <p class="">যেমনঃ কন্ডিশন এমন হতে পারে কোনো কিছু সত্য বা মিথ্যা নাকি দেখা, সংখ্যা বিজোড় হলে এক কাজ আবার জোড় হলে এক কাজ ইত্যাদি।</p>
+                  </div>
+                  <div class="topic-parts">
                   <p class="">সি ভাষায় ৪ ধরনের কন্ডিশনাল স্টেটমেন্ট আছে, এগুলো হলঃ</p>
                   <ol>
                     <li>if স্টেটমেন্ট</li>
