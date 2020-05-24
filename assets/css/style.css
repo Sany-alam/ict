@@ -456,14 +456,14 @@ button.mytimelne-button:hover{
     background-color: #fafafa;
 }
 
-.writepost-textarea{
+/* .writepost-textarea{
     position: relative;
 }
 
-.writepost-textarea input{
+.writepost-textarea input{ */
     /* padding: 5px 0px 30px 10px;
     margin-bottom: 10px; */
-    padding: 15px 40px 40px 15px;
+    /* padding: 15px 40px 40px 15px;
     margin-bottom: 10px;
 }
 
@@ -485,7 +485,7 @@ ul.writepost-icons li.writepost-icon input{
 
 ul.writepost-icons li.writepost-icon i{
     color: #29AAE1;
-}
+} */
 
 .post-section{
     border: 1px solid #e3e3e3;

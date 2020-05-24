@@ -1,8 +1,15 @@
 @extends('app')
 @section('title','Newsfeet')
 @section('page-css')
-    <!-- search question selects css -->
-    <link href="{{ asset('assets/vendors/select2/select2.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets') }}\vendors\select2\select2.css">
+    <style>
+        @media (min-width: 576px)
+        {
+            .modal-dialog {
+            margin: 10.75rem auto!important;
+            }
+        }
+    </style>
 @endsection
 @section('content')
 <!-- box title bar-->
@@ -21,40 +28,14 @@
     </button>
     </div>
     <!-- write post form -->
-    <div class="writepost-form">
-    <h4 class="text-light-primary text-left pl-2">
-        Write Post
-    </h4>
-    <div class="writepost-textarea">
-        <input placeholder="Your text hare"  type="text" class="form-control">
-        <ul class="writepost-icons">
-        {{-- <li class="writepost-icon">
-            <input type="file" id="attach">
-            <label for="attach">
-            <i class="fa fa-paperclip"></i>
-            </label>
-        </li> --}}
-        <li class="writepost-icon">
-            <input type="file" id="image">
-            <label for="image">
-            <i class="fa fa-image"></i>
-            </label>
-            </a>
-        </li>
-        {{-- <li class="writepost-icon">
-            <a href="#">
-            <i class="fa fa-smile"></i>
-            </a>
-        </li> --}}
-        </ul>
+    <div class="card mt-3" id="write-post-card">
+        <div class="card-body"><h1 class="m-0 p-0 text-center text-light-primary">Write post</h1></div>
     </div>
-    <div class="text-right">
-        <button class="newsfeed-buttons" id="add_post">Post</button>
-    </div>
-    </div>
+    {{-- <input placeholder="Your text hare"  type="text" class="form-control">
+    <input type="file" id="image">
+    <button class="newsfeed-buttons" id="add_post">Post</button> --}}
     <!-- posts section -->
     <div id="all_post">
-
         <div class="post-section">
             <div class="post-owner">
                 <div class="post-owner-pp">
@@ -108,19 +89,39 @@
                 <button class="newsfeed-buttons mt-2">Comment</button>
                 </div>
             </div>
-
-            </div>
-
-
+        </div>
     </div>
-
-
-
 </div>
 
+{{-- modals --}}
+<div class="modal fade" id="WritePostModal">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header py-2">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Create post</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                    <i class="anticon anticon-close"></i>
+                </button>
+            </div>
+            <div class="modal-body p-2">
+                <textarea id="write-post-text" class="form-control mb-2" placeholder="Text here ..."></textarea>
+                <select class="select2 mb-2" id="write-post-tag" placeholder="Chose tags" multiple="multiple">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+                <button class="newsfeed-buttons form-control mb-2 py-2" id="add_post">Post</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{-- modals --}}
+@endsection
+@section('page-js')
+    <script src="{{ asset('assets') }}\vendors\select2\select2.min.js"></script>
 @endsection
 @section('page-custom-js')
-<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+{{-- <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script> --}}
 <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
 <script src="{{ asset('assets') }}/js/custom/newsfeed.js?{{ time() }}"></script>
 <script>
