@@ -28,12 +28,17 @@
     </button>
     </div>
     <!-- write post form -->
-    <div class="card mt-3" id="write-post-card">
-        <div class="card-body"><h1 class="m-0 p-0 text-center text-light-primary">Write post</h1></div>
+    <div class="card mt-3">
+        <div class="card-body">
+            <textarea id="write-post-text" class="form-control mb-2" placeholder="Text here ..."></textarea>
+            <select class="select2 mb-2" id="write-post-tag" placeholder="Chose tags" multiple="multiple">
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+            </select>
+            <button class="newsfeed-buttons form-control mb-2" id="add_post">Post</button>
+        </div>
     </div>
-    {{-- <input placeholder="Your text hare"  type="text" class="form-control">
-    <input type="file" id="image">
-    <button class="newsfeed-buttons" id="add_post">Post</button> --}}
     <!-- posts section -->
     <div id="all_post">
         <div class="post-section">
@@ -92,30 +97,6 @@
         </div>
     </div>
 </div>
-
-{{-- modals --}}
-<div class="modal fade" id="WritePostModal">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header py-2">
-                <h5 class="modal-title" id="exampleModalScrollableTitle">Create post</h5>
-                <button type="button" class="close" data-dismiss="modal">
-                    <i class="anticon anticon-close"></i>
-                </button>
-            </div>
-            <div class="modal-body p-2">
-                <textarea id="write-post-text" class="form-control mb-2" placeholder="Text here ..."></textarea>
-                <select class="select2 mb-2" id="write-post-tag" placeholder="Chose tags" multiple="multiple">
-                    <option value="a">a</option>
-                    <option value="b">b</option>
-                    <option value="c">c</option>
-                </select>
-                <button class="newsfeed-buttons form-control mb-2 py-2" id="add_post">Post</button>
-            </div>
-        </div>
-    </div>
-</div>
-{{-- modals --}}
 @endsection
 @section('page-js')
     <script src="{{ asset('assets') }}\vendors\select2\select2.min.js"></script>

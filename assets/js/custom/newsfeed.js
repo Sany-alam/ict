@@ -5,8 +5,4 @@ $(function() {
         }
     }); // csrf solution
     $('.select2').select2(); // keyword selector
-
-    $("#write-post-card").click(function() {
-        $("#WritePostModal").modal("show");
-    });
 });
