@@ -126,6 +126,9 @@
                             </li>
                         </a>
                     </ul>
+                    <div class="text-center">
+                        <a href="{{ route('practice1') }}" class="btn btn-sm btn-primary px-4 my-4">Practice</a>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="chapter-2" role="tabpanel" aria-labelledby="chapter-2-tab">
                     <ul class="topics-ul">
@@ -178,6 +181,9 @@
                             </li>
                         </a>
                     </ul>
+                    <div class="text-center">
+                        <a href="{{ route('practice1') }}" class="btn btn-sm btn-primary px-4 my-4">Practice</a>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="chapter-3" role="tabpanel" aria-labelledby="chapter-3-tab">
                     <ul class="topics-ul">
@@ -242,6 +248,9 @@
                             </li>
                         </a>
                     </ul>
+                    <div class="text-center">
+                        <a href="{{ route('practice1') }}" class="btn btn-sm btn-primary px-4 my-4">Practice</a>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="chapter-4" role="tabpanel" aria-labelledby="chapter-4-tab">
                     <ul class="topics-ul">
@@ -312,6 +321,9 @@
                             </li>
                         </a>
                     </ul>
+                    <div class="text-center">
+                        <a href="{{ route('practice1') }}" class="btn btn-sm btn-primary px-4 my-4">Practice</a>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="chapter-5" role="tabpanel" aria-labelledby="chapter-5-tab">
                     <ul class="topics-ul">
@@ -418,6 +430,9 @@
                             </li>
                         </a>
                     </ul>
+                    <div class="text-center">
+                        <a href="{{ route('practice1') }}" class="btn btn-sm btn-primary px-4 my-4">Practice</a>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="chapter-6" role="tabpanel" aria-labelledby="chapter-6-tab">
                     <ul class="topics-ul">
@@ -488,6 +503,9 @@
                             </li>
                         </a>
                     </ul>
+                    <div class="text-center">
+                        <a href="{{ route('practice1') }}" class="btn btn-sm btn-primary px-4 my-4">Practice</a>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="chapter-7" role="tabpanel" aria-labelledby="chapter-7s-tab">
                     <ul class="topics-ul">
@@ -498,6 +516,9 @@
                             </li>
                         </a>
                     </ul>
+                    <div class="text-center">
+                        <a href="{{ route('practice1') }}" class="btn btn-sm btn-primary px-4 my-4">Practice</a>
+                    </div>
                 </div>
             </div>
           </div>

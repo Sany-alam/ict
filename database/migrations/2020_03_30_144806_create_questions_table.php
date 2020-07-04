@@ -16,8 +16,8 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('topic_id')->unsigned();
+            $table->bigInteger('board_id')->unsigned()->nullable();
             $table->string('question',400);
-            $table->integer('board_id')->nullable();
             $table->string('option1');
             $table->string('option2');
             $table->string('option3');
@@ -26,9 +26,8 @@ class CreateQuestionsTable extends Migration
             $table->string('tag')->nullable();
             $table->string('details',500)->nullable();
             $table->timestamps();
-            $table->foreign('topic_id')
-            ->references('id')->on('topics')
-            ->onDelete('cascade');
+            $table->foreign('topic_id')->references('id')->on('topics')->onDelete('cascade');
+            $table->foreign('board_id')->references('id')->on('board_lists')->onDelete('cascade');
         });
     }
 

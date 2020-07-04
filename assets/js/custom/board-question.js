@@ -22,7 +22,6 @@ $(function() {
                         $("#board-mcq").show();
                         // console.log(data);
                     } else {
-                        console.log(data);
                         $("#board-mcq").hide();
                         $("#board-mcq-no-data").text("No question available");
                         $("#board-mcq-no-data").show();

@@ -1,6 +1,7 @@
 
 @extends('app')
 @section('title','ICT')
+@section('home-active','active')
 @section('content')
 <!-- box title bar-->
 <div class="page-title">

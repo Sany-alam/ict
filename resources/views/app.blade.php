@@ -21,23 +21,20 @@
     <!-- navbar start -->
     <nav class="navbar navbar-expand-md navbar-dark bg-nav fixed-top">
       <div class="container-fluid">
-          <a class="navbar-brand" href="#">ICT logo</a>
+          <a class="navbar-brand" href="{{route('home')}}">ICT logo</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColapseItems" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarColapseItems">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home</a>
+                <li class="nav-item @yield('home-active')">
+                  <a class="nav-link" href="{{route('home')}}">Home</a>
+                </li>
+                <li class="nav-item @yield('profile-active')">
+                  <a class="nav-link" href="{{route('profile')}}">Profile</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Profile</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Settings</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Logout</a>
+                  <a class="nav-link" href="{{url('/')}}">Logout</a>
                 </li>
               </ul>
           </div>

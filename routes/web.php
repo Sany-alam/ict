@@ -17,9 +17,14 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('index');
-});
+})->name("home");
+
+Route::get('/',"UserController@index");
+Route::get('/profile',"UserController@profile")->name('profile');
+Route::post('/login',"UserController@login")->name('login');
+Route::post('/register',"UserController@register")->name('register');
 
 Route::get('Study', function () {
     return view('Study.index');
@@ -64,6 +69,10 @@ Route::prefix('Study')->group(function(){
         Route::get('Topic-12', function () { return view('Study.Topic-1.12'); });
         Route::get('Topic-13', function () { return view('Study.Topic-1.13'); });
         Route::get('Topic-14', function () { return view('Study.Topic-1.14'); });
+        Route::get('practice', function () { 
+            $q = App\chapter::where('id',3)->first();
+            return view('Study.practice',['chapter'=>$q]); 
+        })->name('practice1');
     });
 
     //chapter-2
@@ -76,6 +85,10 @@ Route::prefix('Study')->group(function(){
         Route::get('Topic-6', function () { return view('Study.Topic-2.6'); });
         Route::get('Topic-7', function () { return view('Study.Topic-2.7'); });
         Route::get('Topic-8', function () { return view('Study.Topic-2.8'); });
+        Route::get('practice', function () { 
+            $q = App\chapter::where('id',2)->first();
+            return view('Study.practice',['chapter'=>$q]); 
+        })->name('practice2');
     });
 
     //chapter-3
@@ -90,6 +103,7 @@ Route::prefix('Study')->group(function(){
         Route::get('Topic-8', function () { return view('Study.Topic-3.8'); });
         Route::get('Topic-9', function () { return view('Study.Topic-3.9'); });
         Route::get('Topic-10', function () { return view('Study.Topic-3.10'); });
+        Route::get('practice', function () { return view('Study.Topic-7.1'); })->name('practice3');
     });
 
     //chapter-4
@@ -105,6 +119,10 @@ Route::prefix('Study')->group(function(){
         Route::get('Topic-9', function () { return view('Study.Topic-4.9'); });
         Route::get('Topic-10', function () { return view('Study.Topic-4.10'); });
         Route::get('Topic-11', function () { return view('Study.Topic-4.11'); });
+        Route::get('practice', function () { 
+            $q = App\chapter::where('id',9)->first();
+            return view('Study.practice',['chapter'=>$q]); 
+        })->name('practice4');
     });
 
     //chapter-5
@@ -126,6 +144,10 @@ Route::prefix('Study')->group(function(){
         Route::get('Topic-15', function () { return view('Study.Topic-5.15'); });
         Route::get('Topic-16', function () { return view('Study.Topic-5.16'); });
         Route::get('Topic-17', function () { return view('Study.Topic-5.17'); });
+        Route::get('practice', function () { 
+            $q = App\chapter::where('id',8)->first();
+            return view('Study.practice',['chapter'=>$q]); 
+        })->name('practice5');
     });
 
     //chapter-6
@@ -141,10 +163,15 @@ Route::prefix('Study')->group(function(){
         Route::get('Topic-9', function () { return view('Study.Topic-6.9'); });
         Route::get('Topic-10', function () { return view('Study.Topic-6.10'); });
         Route::get('Topic-11', function () { return view('Study.Topic-6.11'); });
+        Route::get('practice', function () { 
+            $q = App\chapter::where('id',7)->first();
+            return view('Study.practice',['chapter'=>$q]); 
+        })->name('practice6');
     });
 
     //chapter-7
     Route::prefix('Chapter-7')->group(function () {
         Route::get('Topic-1', function () { return view('Study.Topic-7.1'); });
+        Route::get('practice', function () { return view('Study.Topic-7.1'); })->name('practice7');
     });
 });
