@@ -16,7 +16,7 @@
     <script src="{{ asset('assets/js/vendors.min.js') }}"></script>
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
 
-    <title>Document</title>
+    <title>ICT</title>
 </head>
 <body>
   <!-- body background opacity -->
@@ -59,7 +59,8 @@
           <!-- box title bar-->
           <div class="page-title">
             <!-- back button -->
-            <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
+            {{-- <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a> --}}
+            @include('includes.back')
             <!-- box title -->
             <a href="#">১.৪.২.২ দুই-এর পরিপূরকে বিয়োগ</a>
           </div>

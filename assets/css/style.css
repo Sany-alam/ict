@@ -427,7 +427,7 @@ a.chapter-button.active{
 
 /* newsfeed page css start here */
 
-button.mytimelne-button{
+a.mytimelne-button{
     outline: none!important;
     background: #6cb140;
     color: #fff;
@@ -437,7 +437,7 @@ button.mytimelne-button{
     font-size: 13px;
 }
 
-button.mytimelne-button:hover{
+a.mytimelne-button:hover{
     background: #568a35;
 }
 

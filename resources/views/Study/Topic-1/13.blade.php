@@ -59,7 +59,8 @@
           <!-- box title bar-->
           <div class="page-title">
             <!-- back button -->
-            <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
+            {{-- <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a> --}}
+            @include('includes.back')
             <!-- box title -->
             <a href="#">১.৪.২.১ দুই-এর পরিপূরকে যোগ</a>
           </div>

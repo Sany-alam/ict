@@ -15,7 +15,8 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        if (user::where('phone',$request->phone)->exists()) {
+        if ($user = user::where('phone',$request->phone)->exists()) {
+            session()->put('user',$user);
             return "ok";
         }else{
             return "not ok";
@@ -24,7 +25,8 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
-        user::create(['name'=>$request->name,'phone'=>$request->phone,'institute'=>$request->institute]);
+        $user = user::create(['name'=>$request->name,'phone'=>$request->phone,'institute'=>$request->institute]);
+        session()->put('user',$user);
         return "ok";
         // return $Request->name." ".$Request->phone."  ".$Request->institute;
     }
@@ -33,5 +35,11 @@ class UserController extends Controller
     {
         $user = user::where('id',1)->first();
         return view('profile',['user'=>$user]);
+    }
+
+    public function logout()
+    {
+        session()->forget('user');
+        return redirect()->back();
     }
 }

@@ -53,6 +53,7 @@
                         <input type="text" id="institute" class="form-control" placeholder="Institute">
                     </div>
                     <div class="form-group text-right">
+                        <button class="newsfeed-buttons" onclick="to_login()">Cancel</button>
                         <button class="newsfeed-buttons" id="register-submit">Submit</button>
                     </div>
                 </div>
@@ -92,7 +93,7 @@
                     success:function(data) {
                         a = $.trim(data);
                         if(a=="ok"){
-                            location.href="{{url('/home')}}";
+                            location.href="{{route('home')}}";
                         }else{
                             console.log(data);
                         }
@@ -123,7 +124,7 @@
                     success:function(data) {
                         a = $.trim(data);
                         if(a=="ok"){
-                            location.href="{{url('/home')}}";
+                            location.href="{{route('home')}}";
                         }else{
                             to_register();
                         }
@@ -138,12 +139,14 @@
 
     function to_login() {
         $("#otp").hide(function () {
+            $("#register").hide();
             $("#login").show();
         })
     }
 
     function to_register() {
         $("#otp").hide(function () {
+            $("#login").hide();
             $("#register").show();
         })
     }

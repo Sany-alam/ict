@@ -15,7 +15,7 @@
 <!-- box title bar-->
 <div class="page-title">
     <!-- back button -->
-    <a title="Back to 'some where'" class="page-back-arrow" href="#"><i class="fa fa-arrow-left"></i></a>
+    @include('includes.back')
     <!-- box title -->
     <a href="#">Newsfeed</a>
 </div>
@@ -23,9 +23,7 @@
 <div class="page-body">
 <!-- my timeline button -->
     <div class="text-right">
-    <button class="mytimelne-button">
-        My Timeline
-    </button>
+    <a class="mytimelne-button" href="{{route('profile')}}">My Timeline</a>
     </div>
     <!-- write post form -->
     <div class="card mt-3">

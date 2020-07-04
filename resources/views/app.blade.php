@@ -21,7 +21,7 @@
     <!-- navbar start -->
     <nav class="navbar navbar-expand-md navbar-dark bg-nav fixed-top">
       <div class="container-fluid">
-          <a class="navbar-brand" href="{{route('home')}}">ICT logo</a>
+          <a  href="{{route('home')}}"><img class="img-fluid w-10 h-10" src="{{asset('assets\images\logo\icttutor1-white.png')}}" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColapseItems" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -34,7 +34,7 @@
                   <a class="nav-link" href="{{route('profile')}}">Profile</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{url('/')}}">Logout</a>
+                  <a class="nav-link" href="{{url('/logout')}}">Logout</a>
                 </li>
               </ul>
           </div>

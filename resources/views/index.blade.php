@@ -6,7 +6,8 @@
 <!-- box title bar-->
 <div class="page-title">
     <!-- back button -->
-    <a title="Back to 'some where'" class="page-back-arrow" href="#"></a>
+    {{-- <a title="Back to 'some where'" class="page-back-arrow" href="#"></a> --}}
+    @include('includes.back')
     <!-- <i class="fa fa-arrow-left"></i> -->
     <!-- box title -->
     <a href="#">Dashboard</a>
